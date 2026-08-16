@@ -20,7 +20,7 @@ jobs:
       - name: Restore and apply P0 website changes
         shell: bash
         run: |
-          git checkout c79864c6c38fc5f4bb4fd734e91437fe036d1a85 -- index.html
+          git checkout d6ed6a6eb2c44d97b618b441f9d709ed1d3d3f1f -- index.html
           python - <<'PY'
           from pathlib import Path
           p = Path('index.html')
