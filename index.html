@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio AICoPilot — an AI-powered portfolio intelligence companion that helps investors understand their portfolio, market context, risks and opportunities while keeping every decision in their hands.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Portfolio AICoPilot — AI Co-Pilot. You Stay in Control.">
+  <meta property="og:description" content="AI-powered portfolio intelligence for investors. Understand your portfolio, market context, risks and opportunities — without giving up control.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Portfolio AICoPilot — AI Co-Pilot. You Stay in Control.</title>
+  <style>
+    :root{--bg:#0b1220;--panel:#151f32;--panel2:#1b2940;--text:#f4f7fb;--muted:#9aa8bd;--line:#29364d;--accent:#6d55ff;--accent2:#8b78ff;--good:#72d38b;--max:1180px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.07)}.brand{display:flex;align-items:center;gap:12px;font-weight:750;letter-spacing:-.02em}.mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#755cff,#4b38c8);display:grid;place-items:center;box-shadow:0 10px 30px rgba(109,85,255,.25)}.mark span{font-weight:900;font-size:17px}.navlinks{display:flex;gap:28px;color:#b7c1d1;font-size:14px}.navlinks a:hover{color:#fff}.navcta{padding:10px 16px;border:1px solid #3b4961;border-radius:10px}
+    .hero{padding:92px 0 76px;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #34425a;background:rgba(255,255,255,.025);padding:7px 11px;border-radius:999px;color:#bdc8d9;font-size:13px}.dot{width:7px;height:7px;border-radius:50%;background:var(--good);box-shadow:0 0 12px rgba(114,211,139,.7)}h1{font-size:clamp(46px,6vw,76px);line-height:1.02;letter-spacing:-.055em;margin:22px 0 20px;max-width:760px}h1 em{font-style:normal;color:#a99cff}.lead{font-size:20px;color:#b8c3d4;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:11px;font-weight:700;font-size:14px;border:1px solid #3b4961}.btn.primary{background:var(--accent);border-color:var(--accent);box-shadow:0 14px 35px rgba(109,85,255,.25)}.btn.primary:hover{background:var(--accent2)}.btn.secondary{background:#172237}.micro{font-size:12px;color:#77859a;margin-top:15px}
+    .phone-stage{position:relative;min-height:560px;display:grid;place-items:center}.glow{position:absolute;width:360px;height:360px;background:radial-gradient(circle,rgba(109,85,255,.28),transparent 68%);filter:blur(8px)}.phone{position:relative;width:270px;height:550px;border:7px solid #050911;border-radius:40px;background:#101a2c;box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 0 1px #344159;overflow:hidden}.phone:before{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:92px;height:23px;background:#050911;border-radius:0 0 16px 16px;z-index:3}.screen{height:100%;padding:55px 15px 16px;background:linear-gradient(180deg,#111b2e,#0d1627)}.greeting{font-size:11px;color:#aab5c8}.name{font-size:21px;font-weight:800;margin:1px 0 16px}.card{background:#1a263a;border-radius:15px;padding:13px;margin:8px 0;border:1px solid rgba(255,255,255,.035)}.label{font-size:8px;color:#8e9bb0;text-transform:uppercase;letter-spacing:.08em}.value{font-size:20px;font-weight:800;margin-top:3px}.row{display:flex;justify-content:space-between;gap:10px}.pill{font-size:8px;color:#79df92;background:#183c2a;padding:4px 7px;border-radius:999px}.ai{margin-top:5px}.ai-title{font-size:11px;font-weight:750}.opp{font-size:10px;padding:9px 0;border-bottom:1px solid #2b3850}.opp:last-child{border-bottom:0}.score{float:right;color:#8be59e;font-weight:800}.phone-nav{position:absolute;bottom:0;left:0;right:0;height:48px;background:#151a25;border-top:1px solid #303747;display:flex;justify-content:space-around;align-items:center;color:#8994a8;font-size:8px}.phone-nav b{color:#fff}
+    section{padding:86px 0}.section-head{max-width:720px;margin-bottom:38px}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.13em;color:#8878ff;font-weight:800}.section-head h2{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-.04em;margin:10px 0 12px}.section-head p{color:var(--muted);font-size:17px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}.icon{width:38px;height:38px;border-radius:11px;background:#25205b;color:#b5aaff;display:grid;place-items:center;margin-bottom:18px;font-weight:900}.feature h3{margin:0 0 7px;font-size:18px}.feature p{margin:0;color:#98a6bb;font-size:14px}.engines{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.engine{padding:18px 20px;background:#111b2d;border:1px solid #26334a;border-radius:14px;display:flex;justify-content:space-between;gap:20px}.engine strong{font-size:15px}.engine span{color:#7f8da4;font-size:13px;text-align:right}.band{background:linear-gradient(135deg,#171f34,#101827);border-top:1px solid #26344c;border-bottom:1px solid #26344c}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:25px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.018)}.num{font-size:12px;color:#8d7fff;font-weight:800}.step h3{margin:7px 0}.step p{color:#98a6bb;font-size:14px}
+    .roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.phase{border:1px solid var(--line);border-radius:16px;padding:20px;background:var(--panel)}.phase.active{border-color:#5145a7;box-shadow:inset 0 1px 0 rgba(139,120,255,.18)}.phase small{color:#8c7fff;font-weight:800}.phase h3{margin:8px 0;font-size:17px}.phase p{color:#94a2b8;font-size:13px;margin:0}.mission{display:grid;grid-template-columns:1fr 1fr;gap:18px}.mission-card{padding:30px;border-radius:20px;border:1px solid var(--line);background:var(--panel)}.mission-card h3{font-size:23px;margin-top:0}.mission-card p{color:#a2aec0}.cta{padding:75px 0}.cta-box{border:1px solid #3a3b67;background:radial-gradient(circle at 80% 20%,rgba(109,85,255,.18),transparent 40%),#151d31;border-radius:24px;padding:52px;text-align:center}.cta-box h2{font-size:clamp(30px,4vw,48px);line-height:1.08;letter-spacing:-.04em;margin:0 0 12px}.cta-box p{color:#a6b2c5;max-width:650px;margin:0 auto}.cta-box .actions{justify-content:center}.disclaimer{font-size:12px;color:#6f7c91;max-width:850px;margin:25px auto 0;text-align:center}
+    footer{border-top:1px solid rgba(255,255,255,.08);padding:30px 0;color:#728096;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px}.footer-brand{color:#c5cedb;font-weight:700}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:62px}.phone-stage{min-height:520px}.navlinks{display:none}.grid,.steps{grid-template-columns:1fr}.engines,.mission{grid-template-columns:1fr}.roadmap{grid-template-columns:1fr 1fr}.cta-box{padding:35px 22px}}@media(max-width:520px){.wrap{width:min(var(--max),calc(100% - 28px))}h1{font-size:45px}.lead{font-size:17px}.phone{transform:scale(.9)}.roadmap{grid-template-columns:1fr}.footer-row{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav>
+      <a class="brand" href="#top"><span class="mark"><span>AI</span></span>Portfolio AICoPilot</a>
+      <div class="navlinks">
+        <a href="#how">How it works</a><a href="#intelligence">AI intelligence</a><a href="#roadmap">Roadmap</a><a class="navcta" href="#beta">Join the Beta</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="wrap hero">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Private Android Beta</span>
+        <h1>Your portfolio.<br><em>More intelligent.</em></h1>
+        <p class="lead">Portfolio AICoPilot brings AI-powered portfolio intelligence, market context, risk signals and opportunities together — so you can make better-informed decisions while staying in control.</p>
+        <div class="actions"><a class="btn primary" href="#beta">Join the Beta →</a><a class="btn secondary" href="#how">See how it works</a></div>
+        <p class="micro">Built for investors. Designed to explain, not dictate.</p>
+      </div>
+      <div class="phone-stage" aria-label="Portfolio AICoPilot mobile app preview">
+        <div class="glow"></div>
+        <div class="phone"><div class="screen">
+          <div class="greeting">Good Afternoon 👋</div><div class="name">Murali</div>
+          <div class="card"><div class="label">Total Portfolio</div><div class="value">₹810.59</div><div class="row" style="margin-top:7px"><span class="label">Total return&nbsp; -0.81%</span><span class="pill">● LIVE · KITE</span></div></div>
+          <div class="card"><div class="label">Portfolio Health</div><div style="font-size:13px;font-weight:800;margin-top:4px">Defensive</div><div class="label" style="margin-top:5px">Capital deployed 31.3% &nbsp; Positions 2</div></div>
+          <div class="card ai"><div class="row"><div><div class="label">AI Co-Pilot</div><div class="ai-title">What deserves your attention</div></div><span style="color:#a99cff">✦</span></div><div class="opp">PNB <span class="score">121</span><br><span style="color:#7f8da4">HIGH · POSITIVE MOMENTUM</span></div><div class="opp">ETERNAL <span class="score">129</span><br><span style="color:#7f8da4">HIGH · POSITIVE MOMENTUM</span></div></div>
+          <div class="phone-nav"><b>⌂<br>Home</b><span>▣<br>Portfolio</span><span>⌁<br>Markets</span><span>✦<br>Insights</span><span>♙<br>Profile</span></div>
+        </div></div>
+      </div>
+    </section>
+
+    <section id="how" class="band">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">The idea</div><h2>Investing is complex. Your portfolio shouldn't be.</h2><p>Most investors have information everywhere — but not enough context. Portfolio AICoPilot is built to turn portfolio data and market signals into a clearer picture of what deserves your attention.</p></div>
+        <div class="steps"><div class="step"><div class="num">01 / UNDERSTAND</div><h3>See your portfolio clearly</h3><p>Portfolio value, allocation, holdings, performance and health in one place.</p></div><div class="step"><div class="num">02 / INTERPRET</div><h3>Get AI context</h3><p>Multiple intelligence engines examine market conditions, momentum, risk and portfolio signals.</p></div><div class="step"><div class="num">03 / DECIDE</div><h3>You stay in control</h3><p>The Copilot highlights what matters. You decide what to do — no black-box execution required.</p></div></div>
+      </div>
+    </section>
+
+    <section id="intelligence" class="wrap">
+      <div class="section-head"><div class="kicker">Built underneath the experience</div><h2>More than a chatbot.</h2><p>Portfolio AICoPilot is being built as a system of specialised intelligence engines that work together around the investor's portfolio.</p></div>
+      <div class="engines">
+        <div class="engine"><strong>Market Intelligence</strong><span>Regime &amp; market context</span></div>
+        <div class="engine"><strong>Stock Analysis</strong><span>Momentum &amp; evidence</span></div>
+        <div class="engine"><strong>Portfolio Intelligence</strong><span>Allocation &amp; health</span></div>
+        <div class="engine"><strong>Risk Intelligence</strong><span>Risk signals &amp; controls</span></div>
+        <div class="engine"><strong>Opportunity Engine</strong><span>What deserves attention</span></div>
+        <div class="engine"><strong>Holding Review</strong><span>Position-level monitoring</span></div>
+        <div class="engine"><strong>Decision &amp; Outcome Learning</strong><span>Measure what happened next</span></div>
+        <div class="engine"><strong>Execution &amp; Monitoring</strong><span>Controlled actions &amp; runtime checks</span></div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Why we're building it</div><h2>Bring some of the intelligence of professional investing closer to individual investors.</h2><p>Professional funds have teams, systems and layers of research. Individual investors often have a broker app and a stream of disconnected information. We believe AI can narrow that gap — with transparency and user control at the centre.</p></div>
+        <div class="grid"><div class="feature"><div class="icon">◎</div><h3>Explain the signal</h3><p>Don't just surface a score. Show the context behind what deserves attention.</p></div><div class="feature"><div class="icon">◇</div><h3>Keep the investor in control</h3><p>Portfolio AICoPilot is designed as a Copilot, not an authority.</p></div><div class="feature"><div class="icon">↗</div><h3>Learn from outcomes</h3><p>Measure decisions and what happened afterward so the system can improve over time.</p></div></div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="wrap">
+      <div class="section-head"><div class="kicker">Roadmap</div><h2>Start with a beta. Build from evidence.</h2><p>The product roadmap will be shaped by real investor behaviour and feedback, not assumptions.</p></div>
+      <div class="roadmap"><div class="phase active"><small>NOW</small><h3>Private Beta</h3><p>Real users, real portfolios, feedback and validation.</p></div><div class="phase"><small>NEXT</small><h3>Intelligence Expansion</h3><p>Deeper portfolio insights, decision quality and learning.</p></div><div class="phase"><small>THEN</small><h3>Broader Platform</h3><p>More investor workflows, integrations and capabilities.</p></div><div class="phase"><small>LONG TERM</small><h3>AI Portfolio Companion</h3><p>A continuously improving intelligence layer around the investor.</p></div></div>
+    </section>
+
+    <section class="band">
+      <div class="wrap mission">
+        <div class="mission-card"><div class="kicker">Mission</div><h3>Make sophisticated portfolio intelligence more accessible.</h3><p>Give individual investors a clearer understanding of their portfolio, the market around it and the decisions in front of them.</p></div>
+        <div class="mission-card"><div class="kicker">Vision</div><h3>An AI Copilot that works alongside the investor — not instead of them.</h3><p>We want the future of investing assistance to be intelligent, explainable and firmly under the user's control.</p></div>
+      </div>
+    </section>
+
+    <section id="beta" class="wrap cta">
+      <div class="cta-box">
+        <div class="kicker">Private Beta</div>
+        <h2>Be one of the first to use it.</h2>
+        <p>Portfolio AICoPilot is currently being tested with a small group of investors. Join the beta and help shape what we build next.</p>
+        <div class="actions"><a class="btn primary" href="#" onclick="alert('Beta access link will be added here when Google Play Closed Testing is live.');return false;">Join the Beta →</a></div>
+        <p class="disclaimer">Portfolio AICoPilot is an information and portfolio-intelligence product, not a guarantee of investment returns or a substitute for professional financial advice. Investment decisions remain the user's responsibility.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-row"><div><span class="footer-brand">Portfolio AICoPilot</span> · AI Co-Pilot. You Stay in Control.</div><div>Private Beta · India</div></div></footer>
+</body>
+</html>
