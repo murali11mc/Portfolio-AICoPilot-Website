@@ -1,415 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Portfolio AI Copilot — intelligent portfolio monitoring, evidence-backed opportunities, and human-controlled decisions.">
-<meta name="theme-color" content="#060910">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Portfolio AI Copilot — portfolio intelligence that helps you see what matters and decide with confidence.">
+<meta name="theme-color" content="#09111e">
 <title>Portfolio AI Copilot — Your portfolio, more intelligent.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#060910;--surface:#0b111c;--surface2:#101827;--line:#1d2a3d;--text:#f5f7fb;--muted:#98a5b8;--soft:#c3ccda;--accent:#8d6cff;--accent2:#5a9cff;--green:#48d7a0;--shadow:0 30px 100px rgba(0,0,0,.46)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 500px at 50% -180px,rgba(117,89,255,.2),transparent 68%),radial-gradient(700px 420px at 100% 18%,rgba(49,121,255,.11),transparent 72%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.5}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 80%)}
-a{text-decoration:none;color:inherit}img{max-width:100%}.container{width:min(1180px,calc(100% - 40px));margin:auto}
-.nav{height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:0;z-index:50;background:rgba(6,9,16,.78);backdrop-filter:blur(18px)}.brand{display:flex;align-items:center;gap:12px}.brand img{width:42px;height:42px;object-fit:contain}.brand-name{font:800 17px/1 "Manrope",sans-serif;letter-spacing:-.45px}.brand-tag{font-size:9px;letter-spacing:1.3px;color:#8995a9;margin-top:4px}.nav-links{display:flex;align-items:center;gap:28px;font-size:12px;color:#aeb9ca}.nav-links a:not(.nav-cta):hover{color:#fff}.nav-cta{padding:11px 17px;border:1px solid rgba(141,108,255,.5);background:linear-gradient(135deg,rgba(141,108,255,.18),rgba(90,156,255,.12));border-radius:11px}
-.hero{padding:92px 0 40px;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:56px;min-height:720px}.eyebrow{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:999px;border:1px solid rgba(141,108,255,.35);background:rgba(141,108,255,.08);color:#c8b9ff;font-size:10px;font-weight:700;letter-spacing:1.5px}.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px rgba(72,215,160,.65)}
-h1,h2,h3{font-family:"Manrope",sans-serif;margin:0}.hero h1{font-size:clamp(50px,6vw,78px);line-height:1.01;letter-spacing:-4px;margin:23px 0 20px}.gradient{background:linear-gradient(110deg,#c8aaff 0%,#8d6cff 42%,#63a8ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy{max-width:575px;font-size:16px;line-height:1.8;color:#a9b5c7}.hero-actions{display:flex;gap:12px;margin:30px 0 18px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:12px;font-size:12px;font-weight:700}.btn-primary{background:linear-gradient(135deg,#8a65ff,#4f91ff);box-shadow:0 12px 32px rgba(92,96,255,.24)}.btn-secondary{border:1px solid #2a3b53;background:rgba(13,20,32,.7)}.micro{font-size:10px;color:#66758b}
-.hero-visual{position:relative;min-height:580px}.halo{position:absolute;inset:10% 6% 6%;border-radius:50%;background:radial-gradient(circle,rgba(123,86,255,.3),rgba(76,124,255,.1) 34%,transparent 68%);filter:blur(18px)}.app-window{position:absolute;inset:10px;border:1px solid #27364d;border-radius:28px;background:linear-gradient(145deg,#0c1421,#07101a);box-shadow:var(--shadow);padding:14px;overflow:hidden}.window-bar{height:32px;display:flex;align-items:center;justify-content:space-between;padding:0 5px 8px;color:#8290a4;font-size:10px}.window-dots{display:flex;gap:6px}.window-dots span{width:7px;height:7px;border-radius:50%;background:#304056}.window-live{color:var(--green);font-weight:700}.app-window img{height:calc(100% - 32px);width:100%;object-fit:cover;object-position:top;border-radius:19px}
-.trust-row{display:flex;gap:22px;align-items:center;flex-wrap:wrap;color:#7f8da2;font-size:10px;padding-bottom:52px}.trust-row strong{color:#b7c2d2;font-weight:600}.trust-divider{width:1px;height:14px;background:#29384d}
-.section-kicker{font-size:10px;letter-spacing:1.7px;color:#a887ff;font-weight:800}.section-title{font-size:44px;line-height:1.08;letter-spacing:-2px;margin-top:10px}.section-copy{max-width:600px;color:#8f9caf;font-size:13px;line-height:1.8;margin-top:16px}.center{text-align:center}.center .section-copy{margin-left:auto;margin-right:auto}
-.showcase{padding:54px 0 100px}.phone-stage{height:590px;position:relative;margin-top:36px}.phone{position:absolute;bottom:0;padding:6px;border:1px solid #2a3950;background:#070f19;border-radius:33px;box-shadow:0 24px 70px rgba(0,0,0,.52);overflow:hidden}.phone img{width:100%;height:100%;object-fit:cover;border-radius:27px}.phone.p1{left:1%;width:18%;height:430px;transform:rotate(-3deg);opacity:.84}.phone.p2{left:19%;width:20%;height:480px;transform:rotate(-1deg);z-index:2}.phone.p3{left:37%;width:26%;height:575px;z-index:6}.phone.p4{left:61%;width:20%;height:480px;transform:rotate(1deg);z-index:3}.phone.p5{right:1%;width:18%;height:445px;transform:rotate(3deg);z-index:4;opacity:.9}.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}.pillar{padding:24px;border-radius:18px;border:1px solid #1d2c41;background:linear-gradient(160deg,rgba(15,24,38,.9),rgba(8,14,24,.95))}.pillar-num{font:800 25px/1 "Manrope";color:#8f77ff}.pillar h3{font-size:16px;margin:15px 0 7px}.pillar p{font-size:11px;color:#8f9caf;line-height:1.7;margin:0}
-.evidence{padding:36px 0 90px}.evidence-shell{border:1px solid #1e2e44;background:linear-gradient(150deg,#0c1524,#080e18);border-radius:26px;padding:34px;box-shadow:0 24px 90px rgba(0,0,0,.24)}.evidence-head{display:flex;justify-content:space-between;gap:30px;align-items:end}.engine-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}.engine{min-height:166px;border:1px solid #203147;border-radius:15px;background:#0d1726;padding:19px}.engine-icon{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;border:1px solid #3c3568;background:#29234a;color:#beabff;font-weight:800}.engine h3{font-size:12px;margin:13px 0 6px}.engine p{margin:0;color:#8593a7;font-size:10px;line-height:1.65}.engine:nth-child(2) .engine-icon,.engine:nth-child(6) .engine-icon{border-color:#234a79;background:#122a48;color:#6eaeff}.engine:nth-child(3) .engine-icon,.engine:nth-child(7) .engine-icon{border-color:#24594d;background:#102f29;color:#62dfad}.engine:nth-child(4) .engine-icon{border-color:#715320;background:#34260f;color:#ffbd50}
-.workflow{padding:0 0 100px}.workflow-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:35px}.workflow-card{position:relative;text-align:center;padding:26px 12px}.workflow-card:not(:last-child):after{content:"";position:absolute;right:-5px;top:37px;width:10px;height:1px;background:#33445b}.workflow-card span{display:grid;place-items:center;margin:0 auto 13px;width:58px;height:58px;border-radius:50%;border:1px solid #31425a;background:#0d1726;color:#ae91ff;font-size:20px}.workflow-card b{font:700 12px "Manrope"}.workflow-card p{font-size:9px;color:#8190a3;line-height:1.6;margin:8px 0 0}
-.decision{padding:0 0 100px}.decision-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:18px}.decision-copy,.decision-screen{border:1px solid #1f2e43;background:linear-gradient(155deg,#0c1523,#080e18);border-radius:24px;overflow:hidden}.decision-copy{padding:38px}.quote{font:700 31px/1.25 "Manrope";letter-spacing:-1.2px;margin:16px 0 22px}.decision-list{display:grid;gap:10px;margin-top:24px}.decision-item{display:flex;gap:10px;align-items:flex-start;font-size:11px;color:#99a6b8}.decision-item i{font-style:normal;color:#9c81ff}.decision-screen{padding:20px;display:flex;justify-content:center}.decision-screen img{max-height:620px;width:auto;border-radius:27px;box-shadow:0 25px 70px rgba(0,0,0,.5)}
-.beta{padding:20px 0 80px}.beta-shell{border:1px solid #2e3b53;border-radius:28px;padding:34px 38px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:25px;background:radial-gradient(500px 220px at 0 0,rgba(141,108,255,.12),transparent 72%),linear-gradient(145deg,#0e1624,#080e18)}.beta-shell h2{font-size:31px;letter-spacing:-1.5px}.beta-shell p{margin:7px 0 0;color:#8d9bae;font-size:11px}footer{padding:20px 0 40px;color:#66758a;font-size:10px;display:flex;justify-content:space-between;align-items:center}.footer-brand{display:flex;gap:10px;align-items:center}.footer-brand img{width:34px;height:34px}.footer-links{display:flex;gap:22px}
-@media(max-width:1000px){.hero{grid-template-columns:1fr;padding-top:62px}.hero-visual{min-height:520px}.engine-grid{grid-template-columns:repeat(2,1fr)}.phone-stage{height:500px}.phone.p1{height:365px}.phone.p2{height:410px}.phone.p3{height:490px}.phone.p4{height:410px}.phone.p5{height:375px}.workflow-grid{grid-template-columns:1fr}.workflow-card:not(:last-child):after{display:none}.decision-grid{grid-template-columns:1fr}}
-@media(max-width:720px){.container{width:calc(100% - 28px)}.nav{height:70px}.nav-links a:not(.nav-cta){display:none}.brand img{width:37px;height:37px}.brand-name{font-size:15px}.brand-tag{display:none}.hero{padding-top:48px}.hero h1{font-size:46px;letter-spacing:-2.7px}.hero-copy{font-size:14px}.hero-actions{flex-wrap:wrap}.hero-visual{min-height:430px}.app-window{inset:0;border-radius:22px;padding:10px}.app-window img{border-radius:15px}.trust-row{padding-bottom:28px}.showcase{padding-top:34px}.section-title{font-size:34px}.phone-stage{height:500px;overflow:hidden}.phone.p1{left:-8%;width:31%;height:320px}.phone.p2{left:18%;width:35%;height:390px}.phone.p3{left:31%;width:44%;height:490px}.phone.p4{left:63%;width:35%;height:375px}.phone.p5{right:-8%;width:30%;height:335px}.pillars{grid-template-columns:1fr}.evidence-shell{padding:24px 16px}.evidence-head{display:block}.engine-grid{grid-template-columns:1fr 1fr}.engine{min-height:152px;padding:15px}.beta-shell{grid-template-columns:1fr;text-align:center;padding:28px 20px}.beta-shell .btn{width:100%}footer{display:block}.footer-links{margin-top:16px;flex-wrap:wrap}}
-@media(max-width:430px){.hero h1{font-size:40px}.hero-visual{min-height:370px}.phone-stage{height:430px}.phone.p1{height:270px}.phone.p2{height:325px}.phone.p3{height:420px}.phone.p4{height:315px}.phone.p5{height:280px}.engine-grid{grid-template-columns:1fr}.decision-copy{padding:27px}.quote{font-size:25px}}
+:root{--bg:#09111e;--card:#141f31;--line:#2a3a52;--text:#eef3fb;--muted:#9aa8bc;--purple:#8d7cff;--green:#63d8a7;--shadow:0 30px 90px rgba(0,0,0,.38)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:"DM Sans",sans-serif;background:radial-gradient(900px 500px at 50% -180px,rgba(114,101,255,.18),transparent 68%),radial-gradient(700px 400px at 100% 25%,rgba(61,122,255,.07),transparent 70%),var(--bg);line-height:1.55}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 78%)}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.nav-wrap{position:sticky;top:0;z-index:50;background:rgba(9,17,30,.76);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.05)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px}.brand-mark img{width:34px;height:34px;object-fit:contain}.brand-name{display:block;font:800 17px/1 "Manrope",sans-serif;letter-spacing:-.5px}.brand-tag{display:block;margin-top:4px;font-size:8px;color:#8190a6;letter-spacing:1.35px;font-weight:700}.nav-links{display:flex;align-items:center;gap:28px;color:#aab5c5;font-size:12px}.nav-links a:not(.nav-cta):hover{color:#fff}.nav-cta{padding:10px 16px;border-radius:11px;border:1px solid rgba(143,124,255,.55);color:#eeeaff;background:linear-gradient(135deg,rgba(141,124,255,.18),rgba(92,136,255,.1))}
+.hero{min-height:760px;display:grid;grid-template-columns:1fr .95fr;align-items:center;gap:80px;padding:82px 0 70px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;border:1px solid rgba(141,124,255,.36);color:#c6bcff;background:rgba(141,124,255,.08);font-size:10px;letter-spacing:1.5px;font-weight:800}.live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px rgba(99,216,167,.65)}h1,h2,h3{font-family:"Manrope",sans-serif;margin:0}h1{max-width:700px;margin:22px 0 20px;font-size:clamp(52px,6.2vw,80px);line-height:1.01;letter-spacing:-4px}.gradient{background:linear-gradient(100deg,#bba9ff 0%,#8e7aff 45%,#78a8ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy{max-width:600px;color:#aab6c8;font-size:16px;line-height:1.8}.hero-actions{display:flex;gap:12px;margin:30px 0 16px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:47px;padding:0 19px;border-radius:13px;font-size:12px;font-weight:800;transition:.2s ease}.btn:hover{transform:translateY(-1px)}.btn-primary{color:white;background:linear-gradient(135deg,#8c78f8,#6e98f3);box-shadow:0 14px 32px rgba(105,110,255,.25)}.btn-secondary{border:1px solid #33435b;background:rgba(20,31,49,.65);color:#d8e0ed}.hero-note{font-size:10px;color:#718096}
+.hero-phone-zone{position:relative;min-height:640px;display:flex;justify-content:center;align-items:center}.hero-glow{position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(117,101,255,.18),rgba(91,137,255,.07) 35%,transparent 68%);filter:blur(12px)}.hero-phone{position:relative;z-index:2;height:620px;filter:drop-shadow(0 30px 45px rgba(0,0,0,.45))}.hero-stat{position:absolute;z-index:3;padding:13px 15px;border:1px solid rgba(132,151,184,.25);border-radius:13px;background:rgba(18,29,46,.88);box-shadow:0 18px 45px rgba(0,0,0,.25);backdrop-filter:blur(12px)}.hero-stat strong{display:block;font-size:16px;font-family:"Manrope",sans-serif}.hero-stat span{font-size:9px;color:#8d9bb0}.stat-one{left:-2%;top:22%}.stat-two{right:-4%;bottom:19%}.stat-green{color:var(--green)}
+.trust-row{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:0 0 88px;color:#8190a5;font-size:10px}.trust-row strong{color:#b3bfd0;font-weight:700}.trust-divider{width:1px;height:15px;background:#2a3a52}section{scroll-margin-top:90px}.section{padding:105px 0}.section-head{max-width:670px}.section-kicker{color:#a895ff;font-size:10px;letter-spacing:1.8px;font-weight:800}.section-title{margin-top:10px;font-size:clamp(34px,4.2vw,52px);line-height:1.08;letter-spacing:-2.4px}.section-copy{margin:15px 0 0;color:#91a0b4;font-size:13px;line-height:1.85}.center{text-align:center}.center .section-head{margin:auto}.screen{border:1px solid rgba(129,151,188,.2);border-radius:34px;background:#070c14;overflow:hidden;box-shadow:var(--shadow)}.screen img{width:100%;height:100%;object-fit:cover}
+.portfolio-grid{margin-top:50px;display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:end}.portfolio-main{padding:14px;background:linear-gradient(145deg,#111b2b,#09111d)}.portfolio-main img{border-radius:25px}.portfolio-side{display:grid;gap:20px}.portfolio-side .screen:first-child{height:390px}.portfolio-side .screen:last-child{height:265px}.feature-strip{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{border:1px solid rgba(154,176,214,.13);border-radius:17px;padding:22px;background:linear-gradient(150deg,rgba(22,33,52,.86),rgba(13,22,35,.9))}.feature-icon{width:35px;height:35px;border-radius:10px;display:grid;place-items:center;background:rgba(141,124,255,.13);color:#aa9bff;border:1px solid rgba(141,124,255,.25);font-weight:800}.feature h3{font-size:14px;margin:13px 0 6px}.feature p{margin:0;color:#8b99ac;font-size:11px;line-height:1.7}
+.opportunity-wrap{margin-top:54px;display:grid;grid-template-columns:.78fr 1.22fr;gap:48px;align-items:center}.opportunity-copy{padding:10px 0}.point-list{display:grid;gap:16px;margin-top:28px}.point{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start}.point-num{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:#1a2639;border:1px solid #33435b;color:#ab9dff;font:800 12px "Manrope",sans-serif}.point h3{font-size:13px;margin:0 0 4px}.point p{margin:0;font-size:11px;color:#8796aa;line-height:1.65}.opportunity-stack{position:relative;min-height:720px;display:flex;align-items:center;justify-content:center}.opportunity-main{height:690px;position:relative;z-index:3}.opportunity-back{position:absolute;height:510px;opacity:.58;filter:brightness(.85);transform:translateX(-210px) rotate(-5deg);z-index:1}.opportunity-back.right{transform:translateX(215px) rotate(5deg)}
+.intel-shell{margin-top:50px;padding:36px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(150deg,#101a2a,#0a121e)}.intel-top{display:grid;grid-template-columns:1fr .85fr;gap:40px;align-items:end}.layer-grid{margin-top:30px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.layer{min-height:155px;padding:18px;border:1px solid #2a3a52;border-radius:15px;background:#111c2c}.layer-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;border:1px solid #443c77;background:#29234a;color:#bcaeff;font-weight:800}.layer:nth-child(2) .layer-icon,.layer:nth-child(6) .layer-icon{border-color:#294c78;background:#132a48;color:#7db4ff}.layer:nth-child(3) .layer-icon,.layer:nth-child(7) .layer-icon{border-color:#24594d;background:#103029;color:#6ae0af}.layer:nth-child(4) .layer-icon{border-color:#765827;background:#372912;color:#f7c45e}.layer h3{font-size:12px;margin:13px 0 6px}.layer p{margin:0;font-size:10px;color:#8594a8;line-height:1.65}
+.control-grid{margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}.control-copy{border:1px solid var(--line);border-radius:26px;padding:40px;background:linear-gradient(150deg,#101a2a,#0b1320);display:flex;flex-direction:column;justify-content:center}.quote{margin:15px 0 17px;font:800 37px/1.2 "Manrope",sans-serif;letter-spacing:-1.8px}.control-list{display:grid;gap:11px;margin-top:26px}.control-item{display:flex;gap:10px;color:#9caabd;font-size:11px}.control-item b{color:#a895ff}.control-screen{min-height:700px;display:flex;align-items:center;justify-content:center;padding:18px;background:linear-gradient(145deg,#0d1726,#080f19)}.control-screen img{height:650px;width:auto}
+.markets-grid{margin-top:50px;display:grid;grid-template-columns:.92fr 1.08fr;gap:48px;align-items:center}.markets-screen{height:650px;justify-self:center}.markets-screen img{width:auto;height:100%}.market-cards{display:grid;gap:13px;margin-top:28px}.market-card{display:flex;gap:14px;align-items:flex-start;padding:17px;border:1px solid rgba(154,176,214,.13);border-radius:15px;background:rgba(19,30,47,.72)}.market-card span{width:29px;height:29px;border-radius:9px;display:grid;place-items:center;background:#1d2940;color:#a99cff;font-weight:800;font-size:11px}.market-card h3{font-size:12px;margin:0 0 3px}.market-card p{margin:0;color:#8291a6;font-size:10px}
+.journey{padding-top:30px}.journey-stage{margin-top:50px;height:560px;position:relative;display:flex;justify-content:center;align-items:end}.journey-phone{position:absolute;bottom:0;filter:drop-shadow(0 25px 50px rgba(0,0,0,.42))}.j1{height:420px;left:4%;transform:rotate(-7deg);opacity:.72}.j2{height:490px;left:20%;transform:rotate(-3deg);opacity:.9}.j3{height:555px;left:50%;transform:translateX(-50%);z-index:5}.j4{height:490px;right:20%;transform:rotate(3deg);opacity:.9}.j5{height:430px;right:4%;transform:rotate(7deg);opacity:.72}
+.profile-grid{margin-top:52px;display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:center}.profile-screen{height:650px;justify-self:center}.profile-screen img{height:100%;width:auto}.profile-points{display:grid;gap:14px;margin-top:25px}.profile-point{padding:17px 18px;border-left:2px solid #8d7cff;background:rgba(19,30,47,.68);border-radius:0 13px 13px 0}.profile-point b{display:block;font-size:12px}.profile-point span{display:block;margin-top:4px;color:#8795a8;font-size:10px}
+.beta{padding:110px 0 70px}.beta-shell{position:relative;overflow:hidden;padding:54px;border-radius:30px;border:1px solid #3b4962;background:radial-gradient(500px 250px at 10% 0,rgba(141,124,255,.16),transparent 72%),radial-gradient(420px 260px at 95% 100%,rgba(88,139,255,.11),transparent 72%),linear-gradient(145deg,#111b2b,#0a121e);text-align:center}.beta-shell h2{font-size:clamp(32px,4vw,48px);letter-spacing:-2px;margin-top:9px}.beta-shell p{max-width:550px;margin:14px auto 26px;color:#93a1b4;font-size:13px}footer{padding:28px 0 45px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.06);color:#708095;font-size:10px}.footer-brand{display:flex;align-items:center;gap:10px}.footer-brand img{width:28px;height:28px}.footer-links{display:flex;gap:22px}.footer-links a:hover{color:#dce5f2}
+@media(max-width:1000px){.hero{grid-template-columns:1fr;padding-top:70px;gap:25px}.hero-copy{max-width:700px}.hero-phone-zone{min-height:620px}.portfolio-grid,.opportunity-wrap,.control-grid,.markets-grid,.profile-grid{grid-template-columns:1fr}.portfolio-side{grid-template-columns:1fr 1fr}.portfolio-side .screen{height:430px!important}.markets-screen{order:2}.profile-screen{order:2}.layer-grid{grid-template-columns:repeat(2,1fr)}.j1{left:-4%}.j2{left:15%}.j4{right:15%}.j5{right:-4%}}
+@media(max-width:720px){.container{width:calc(100% - 28px)}.nav{height:68px}.nav-links{gap:12px}.nav-links a:not(.nav-cta){display:none}.brand-tag{display:none}.hero{min-height:auto;padding:60px 0 35px}h1{font-size:48px;letter-spacing:-2.8px}.hero-copy{font-size:14px}.hero-actions{flex-wrap:wrap}.hero-phone-zone{min-height:540px}.hero-phone{height:520px}.hero-stat{display:none}.trust-row{padding-bottom:45px}.section{padding:70px 0}.section-title{font-size:36px;letter-spacing:-1.7px}.portfolio-grid,.feature-strip{grid-template-columns:1fr}.portfolio-side{grid-template-columns:1fr}.portfolio-side .screen:first-child{height:460px!important}.portfolio-side .screen:last-child{height:360px!important}.opportunity-stack{min-height:600px}.opportunity-main{height:580px}.opportunity-back{display:none}.intel-shell{padding:22px 15px}.intel-top{grid-template-columns:1fr}.layer-grid{grid-template-columns:1fr 1fr}.control-copy{padding:30px}.quote{font-size:30px}.control-screen{min-height:600px}.control-screen img{height:570px}.markets-screen{height:580px}.journey-stage{height:470px}.j1{height:300px;left:-13%}.j2{height:370px;left:8%}.j3{height:460px}.j4{height:370px;right:8%}.j5{height:310px;right:-13%}.profile-screen{height:570px}.beta{padding:80px 0 50px}.beta-shell{padding:42px 22px}footer{display:block}.footer-links{margin-top:18px;flex-wrap:wrap}}
+@media(max-width:430px){h1{font-size:42px}.hero-phone-zone{min-height:480px}.hero-phone{height:465px}.layer-grid{grid-template-columns:1fr}.journey-stage{height:420px}.j1,.j5{display:none}.j2{height:330px;left:0}.j3{height:410px}.j4{height:330px;right:0}.control-screen img{height:530px}.markets-screen{height:530px}}
 </style>
 </head>
-
 <body>
-
-<header class="container nav">
-    <a class="brand" href="#top">
-        <img src="assets/logo.png" alt="Portfolio AI Copilot">
-        <span>
-            <div class="brand-name">Portfolio AI Copilot</div>
-            <div class="brand-tag">AI CO-PILOT · YOU STAY IN CONTROL</div>
-        </span>
-    </a>
-
-    <nav class="nav-links">
-        <a href="#product">Product</a>
-        <a href="#intelligence">Intelligence</a>
-        <a href="#how">How it works</a>
-        <a href="#control">Control</a>
-
-        <a class="nav-cta"
-           https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header
-            Join Private Beta
-        </a>
-    </nav>
-</header>
-
+<div class="nav-wrap"><header class="container nav"><a class="brand" href="#top"><span class="brand-mark"><img src="assets/logo.png" alt=""></span><span><span class="brand-name">Portfolio AI Copilot</span><span class="brand-tag">AI CO-PILOT · YOU STAY IN CONTROL</span></span></a><nav class="nav-links"><a href="#portfolio">Product</a><a href="#intelligence">Intelligence</a><a href="#how">How it works</a><a href="#control">Control</a><a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header">Join Private Beta</a></nav></header></div>
 <main id="top">
-
-<section class="container hero" id="product">
-    <div>
-        <span class="eyebrow">
-            <span class="dot"></span> PRIVATE BETA
-        </span>
-
-        <h1>
-            Your portfolio.<br>
-            <span class="gradient">More intelligent.</span>
-        </h1>
-
-        <p class="hero-copy">
-            Portfolio AI Copilot brings portfolio context, market intelligence
-            and evidence-backed opportunities into one clear decision layer —
-            so you know what deserves attention and why.
-        </p>
-
-        <div class="hero-actions">
-            <a class="btn btn-primary"
-               https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header
-                Join Private Beta <span>→</span>
-            </a>
-
-            <a class="btn btn-secondary" href="#how">
-                See how it works
-            </a>
-        </div>
-
-        <div class="micro">
-            No blind black-box decisions. You review and decide.
-        </div>
-    </div>
-
-    <div class="hero-visual">
-        <div class="halo"></div>
-
-        <div class="app-window">
-            <div class="window-bar">
-                <div class="window-dots">
-                    <span></span><span></span><span></span>
-                </div>
-
-                <div>Portfolio AI Copilot</div>
-
-                <div class="window-live">● LIVE</div>
-            </div>
-
-            <img src="assets/home.png"
-                 alt="Portfolio AI Copilot home screen">
-        </div>
-    </div>
-</section>
-
-<div class="container trust-row">
-    <strong>Evidence-backed opportunities</strong>
-    <span class="trust-divider"></span>
-    <strong>Portfolio-aware intelligence</strong>
-    <span class="trust-divider"></span>
-    <strong>Human-controlled actions</strong>
-    <span class="trust-divider"></span>
-    <strong>Built for long-term investors</strong>
-</div>
-
-<section class="container showcase">
-    <div class="center">
-        <div class="section-kicker">THE PRODUCT</div>
-
-        <h2 class="section-title">
-            One copilot across the journey.
-        </h2>
-
-        <p class="section-copy">
-            From your first market signal to the final holding decision,
-            the experience stays focused on one thing: turning scattered
-            information into useful portfolio context.
-        </p>
-    </div>
-
-    <div class="phone-stage">
-        <div class="phone p1">
-            <img src="assets/profile.png"
-                 alt="Profile and AI Copilot settings">
-        </div>
-
-        <div class="phone p2">
-            <img src="assets/ai-insights.png"
-                 alt="AI insights screen">
-        </div>
-
-        <div class="phone p3">
-            <img src="assets/home.png"
-                 alt="Portfolio AI Copilot home screen">
-        </div>
-
-        <div class="phone p4">
-            <img src="assets/portfolio.png"
-                 alt="Portfolio screen">
-        </div>
-
-        <div class="phone p5">
-            <img src="assets/ai-opportunity.png"
-                 alt="AI opportunity screen">
-        </div>
-    </div>
-
-    <div class="pillars">
-        <article class="pillar">
-            <div class="pillar-num">01</div>
-            <h3>Understand the portfolio</h3>
-            <p>
-                See what is gaining, losing, concentrated,
-                or asking for attention before you act.
-            </p>
-        </article>
-
-        <article class="pillar">
-            <div class="pillar-num">02</div>
-            <h3>Surface the opportunity</h3>
-            <p>
-                AI identifies opportunities and explains
-                the strongest evidence behind each one.
-            </p>
-        </article>
-
-        <article class="pillar">
-            <div class="pillar-num">03</div>
-            <h3>Decide with context</h3>
-            <p>
-                Your portfolio, the market and the evidence
-                come together before an action is taken.
-            </p>
-        </article>
-    </div>
-</section>
-
-<section class="container evidence" id="intelligence">
-    <div class="evidence-shell">
-
-        <div class="evidence-head">
-            <div>
-                <div class="section-kicker">
-                    8-LAYER INTELLIGENCE
-                </div>
-
-                <h2 class="section-title">
-                    More evidence.<br>Less noise.
-                </h2>
-            </div>
-
-            <p class="section-copy">
-                Independent intelligence layers combine market,
-                company and portfolio signals into an explainable view —
-                not a single mysterious score.
-            </p>
-        </div>
-
-        <div class="engine-grid">
-
-            <article class="engine">
-                <div class="engine-icon">↗</div>
-                <h3>Technical Evidence</h3>
-                <p>Trend, momentum, relative strength and price behaviour.</p>
-            </article>
-
-            <article class="engine">
-                <div class="engine-icon">▥</div>
-                <h3>Fundamental Evidence</h3>
-                <p>Financial quality, growth and business health.</p>
-            </article>
-
-            <article class="engine">
-                <div class="engine-icon">▮</div>
-                <h3>Earnings Intelligence</h3>
-                <p>Results, growth momentum and management outlook.</p>
-            </article>
-
-            <article class="engine">
-                <div class="engine-icon">◉</div>
-                <h3>Institutional Activity</h3>
-                <p>Institutional flows and positioning context.</p>
-            </article>
-
-            <article class="engine">
-                <div class="engine-icon">▣</div>
-                <h3>News Intelligence</h3>
-                <p>Material events, news signals and market sentiment.</p>
-            </article>
-
-            <article class="engine">
-                <div class="engine-icon">◔</div>
-                <h3>Sector Intelligence</h3>
-                <p>Leadership, weakness and sector-level trends.</p>
-            </article>
-
-            <article class="engine">
-                <div class="engine-icon">◎</div>
-                <h3>Market &amp; Macro</h3>
-                <p>Market breadth, volatility and wider context.</p>
-            </article>
-
-            <article class="engine">
-                <div class="engine-icon">◈</div>
-                <h3>Portfolio Intelligence</h3>
-                <p>Fit, concentration, allocation and portfolio impact.</p>
-            </article>
-
-        </div>
-    </div>
-</section>
-
-<section class="container workflow" id="how">
-
-    <div class="center">
-        <div class="section-kicker">HOW IT WORKS</div>
-
-        <h2 class="section-title">
-            Intelligence first. You decide.
-        </h2>
-
-        <p class="section-copy">
-            The copilot does the heavy lifting without
-            taking the decision away from you.
-        </p>
-    </div>
-
-    <div class="workflow-grid">
-
-        <div class="workflow-card">
-            <span>⌕</span>
-            <b>We scan</b>
-            <p>Continuously look across the market and your portfolio.</p>
-        </div>
-
-        <div class="workflow-card">
-            <span>◇</span>
-            <b>We analyse</b>
-            <p>Apply multiple independent evidence layers.</p>
-        </div>
-
-        <div class="workflow-card">
-            <span>◉</span>
-            <b>You review</b>
-            <p>See the signal, context and confidence clearly.</p>
-        </div>
-
-        <div class="workflow-card">
-            <span>♙</span>
-            <b>You decide</b>
-            <p>Approve, decline or keep watching.</p>
-        </div>
-
-        <div class="workflow-card">
-            <span>✓</span>
-            <b>We monitor</b>
-            <p>Track the decision and surface what changes.</p>
-        </div>
-
-    </div>
-</section>
-
-<section class="container decision" id="control">
-
-    <div class="decision-grid">
-
-        <div class="decision-copy">
-
-            <div class="section-kicker">HUMAN CONTROL</div>
-
-            <div class="quote">
-                AI explains.<br>You make the call.
-            </div>
-
-            <p class="section-copy">
-                Trade decisions should never depend on a black box.
-                Every opportunity and holding review is designed to show
-                what the AI sees, why it matters and what it could mean
-                for your portfolio.
-            </p>
-
-            <div class="decision-list">
-
-                <div class="decision-item">
-                    <i>✦</i>
-                    <span>Clear evidence behind every opportunity</span>
-                </div>
-
-                <div class="decision-item">
-                    <i>✦</i>
-                    <span>Portfolio context before an action</span>
-                </div>
-
-                <div class="decision-item">
-                    <i>✦</i>
-                    <span>Approve, decline or keep watching</span>
-                </div>
-
-                <div class="decision-item">
-                    <i>✦</i>
-                    <span>You remain accountable for the decision</span>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="decision-screen">
-            <img src="assets/holding_detail.png"
-                 alt="Holding detail showing AI assessment and decision controls">
-        </div>
-
-    </div>
-</section>
-
-<section class="container beta">
-
-    <div class="beta-shell">
-
-        <div>
-            <div class="section-kicker">PRIVATE BETA</div>
-
-            <h2>
-                See what your portfolio is missing.
-            </h2>
-
-            <p>
-                Join the early group testing Portfolio AI Copilot.
-            </p>
-        </div>
-
-        <a class="btn btn-primary"
-           href="https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header">
-            Request beta access →
-        </a>
-
-    </div>
-</section>
-
+<section class="container hero"><div><span class="eyebrow"><span class="live-dot"></span> PRIVATE BETA</span><h1>Your portfolio.<br><span class="gradient">Finally, intelligent.</span></h1><p class="hero-copy">Portfolio AI Copilot understands your portfolio, scans the market and surfaces what deserves your attention — with the evidence behind every decision.</p><div class="hero-actions"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header">Join Private Beta →</a><a class="btn btn-secondary" href="#how">See how it works</a></div><div class="hero-note">No black-box decisions. AI provides the intelligence. You stay in control.</div></div><div class="hero-phone-zone"><div class="hero-glow"></div><div class="hero-stat stat-one"><span>PORTFOLIO CONTEXT</span><strong>Always <span class="stat-green">aware</span></strong></div><img class="hero-phone" src="assets/Home (3).png" alt="Portfolio AI Copilot home dashboard"><div class="hero-stat stat-two"><span>AI OPPORTUNITIES</span><strong>Evidence first</strong></div></div></section>
+<div class="container trust-row"><strong>Portfolio-aware intelligence</strong><span class="trust-divider"></span><strong>Evidence-backed opportunities</strong><span class="trust-divider"></span><strong>Human-controlled decisions</strong><span class="trust-divider"></span><strong>Built for long-term investors</strong></div>
+<section class="container section" id="portfolio"><div class="section-head"><div class="section-kicker">YOUR PORTFOLIO, UNDERSTOOD</div><h2 class="section-title">See the whole picture.<br>Not just the numbers.</h2><p class="section-copy">Understand what you own, what is working, what needs attention and where your portfolio may be exposed — all in one clear view.</p></div><div class="portfolio-grid"><div class="screen portfolio-main"><img src="assets/portfolio(5).png" alt="Portfolio overview"></div><div class="portfolio-side"><div class="screen"><img src="assets/portfolio_snapshot(3).png" alt="Portfolio snapshot"></div><div class="screen"><img src="assets/ai_portfolio_insights(3).png" alt="AI portfolio insights"></div></div></div><div class="feature-strip"><article class="feature"><div class="feature-icon">◉</div><h3>Portfolio health</h3><p>Know what is gaining, losing or needs review before it becomes noise.</p></article><article class="feature"><div class="feature-icon">◇</div><h3>Holding context</h3><p>Every position is viewed in the context of trend, evidence and portfolio impact.</p></article><article class="feature"><div class="feature-icon">↗</div><h3>AI-managed clarity</h3><p>Keep AI-managed and self-managed decisions clear without losing the full picture.</p></article></div></section>
+<section class="container section"><div class="opportunity-wrap"><div class="opportunity-copy"><div class="section-kicker">OPPORTUNITY RADAR</div><h2 class="section-title">Find what deserves attention.</h2><p class="section-copy">The AI does not simply throw stock ideas at you. It scans for meaningful opportunities, builds the evidence and shows you why each signal matters.</p><div class="point-list"><div class="point"><span class="point-num">01</span><div><h3>Opportunity identified</h3><p>Potential signals are surfaced from the latest market and company evidence.</p></div></div><div class="point"><span class="point-num">02</span><div><h3>Evidence assembled</h3><p>Technical, fundamental, earnings and other intelligence layers contribute context.</p></div></div><div class="point"><span class="point-num">03</span><div><h3>You review the case</h3><p>See the signal, strength, confidence and guidance before making a decision.</p></div></div></div></div><div class="opportunity-stack"><img class="screen opportunity-back" src="assets/insights(4).png" alt=""><img class="screen opportunity-main" src="assets/ai-opportunity(4).png" alt="AI opportunity"><img class="screen opportunity-back right" src="assets/holding_detail(3).png" alt=""></div></div></section>
+<section class="container section" id="intelligence"><div class="center"><div class="section-kicker">8-LAYER INTELLIGENCE</div><h2 class="section-title">More evidence.<br>Less noise.</h2><p class="section-copy">Independent intelligence layers combine market, company and portfolio signals into an explainable view — not one mysterious score.</p></div><div class="intel-shell"><div class="intel-top"><div><div class="section-kicker">THE AI ENGINE</div><h2 class="section-title">One decision layer.<br>Multiple perspectives.</h2></div><p class="section-copy">The strongest opportunities are not defined by one indicator. Portfolio AI Copilot brings independent evidence together before presenting the case.</p></div><div class="layer-grid"><article class="layer"><div class="layer-icon">↗</div><h3>Technical Evidence</h3><p>Trend, momentum, relative strength and price behaviour.</p></article><article class="layer"><div class="layer-icon">▥</div><h3>Fundamental Evidence</h3><p>Financial quality, growth and business health.</p></article><article class="layer"><div class="layer-icon">▮</div><h3>Earnings Intelligence</h3><p>Results, growth momentum and management outlook.</p></article><article class="layer"><div class="layer-icon">◉</div><h3>Institutional Activity</h3><p>Institutional flows and positioning context.</p></article><article class="layer"><div class="layer-icon">▣</div><h3>News Intelligence</h3><p>Material events, news signals and relevant sentiment.</p></article><article class="layer"><div class="layer-icon">◔</div><h3>Sector Intelligence</h3><p>Leadership, weakness and sector-level trends.</p></article><article class="layer"><div class="layer-icon">◎</div><h3>Market &amp; Macro</h3><p>Market breadth, volatility and wider market context.</p></article><article class="layer"><div class="layer-icon">◈</div><h3>Portfolio Intelligence</h3><p>Fit, concentration, allocation and portfolio impact.</p></article></div></div></section>
+<section class="container section" id="control"><div class="control-grid"><div class="control-copy"><div class="section-kicker">HUMAN CONTROL</div><div class="quote">AI explains.<br><span class="gradient">You make the call.</span></div><p class="section-copy">Trade decisions should never depend on a black box. Every opportunity and holding review is designed to show what the AI sees, why it matters and what it could mean for your portfolio.</p><div class="control-list"><div class="control-item"><b>✦</b><span>Clear evidence behind every opportunity</span></div><div class="control-item"><b>✦</b><span>Portfolio context before an action</span></div><div class="control-item"><b>✦</b><span>Approve, decline or keep watching</span></div><div class="control-item"><b>✦</b><span>You remain in control of the decision</span></div></div></div><div class="screen control-screen"><img src="assets/holding_detail(3).png" alt="Holding detail"></div></div></section>
+<section class="container section"><div class="markets-grid"><div><div class="section-kicker">MARKET INTELLIGENCE</div><h2 class="section-title">Your portfolio does not live in isolation.</h2><p class="section-copy">Portfolio decisions need market context. See what the broader market, sectors and opportunity landscape are telling you before acting.</p><div class="market-cards"><div class="market-card"><span>01</span><div><h3>Market context</h3><p>Understand the current market environment instead of evaluating every signal in isolation.</p></div></div><div class="market-card"><span>02</span><div><h3>Opportunity radar</h3><p>Track opportunities across the market and understand which ones have the strongest evidence.</p></div></div><div class="market-card"><span>03</span><div><h3>Sector intelligence</h3><p>See where strength and weakness are developing across the market.</p></div></div></div></div><div class="screen markets-screen"><img src="assets/markets(3).png" alt="Markets intelligence"></div></div></section>
+<section class="container section journey" id="how"><div class="center"><div class="section-kicker">ONE COPILOT ACROSS THE JOURNEY</div><h2 class="section-title">Intelligence first.<br>You decide.</h2><p class="section-copy">From understanding the portfolio to finding opportunities and reviewing decisions, the experience stays connected.</p></div><div class="journey-stage"><img class="screen journey-phone j1" src="assets/profile(5).png" alt="Profile"><img class="screen journey-phone j2" src="assets/ai_portfolio_insights(3).png" alt="AI insights"><img class="screen journey-phone j3" src="assets/Home (3).png" alt="Home"><img class="screen journey-phone j4" src="assets/portfolio(5).png" alt="Portfolio"><img class="screen journey-phone j5" src="assets/insights(4).png" alt="Insights"></div></section>
+<section class="container section"><div class="profile-grid"><div class="screen profile-screen"><img src="assets/profile(5).png" alt="Profile and AI Copilot settings"></div><div><div class="section-kicker">YOUR COPILOT, YOUR WAY</div><h2 class="section-title">Intelligence that fits your portfolio.</h2><p class="section-copy">Connect your portfolio, define your preferences and control how the AI supports you. The copilot adapts to your portfolio context without taking away ownership of the decision.</p><div class="profile-points"><div class="profile-point"><b>Broker-connected portfolio context</b><span>Bring your investment information into the intelligence layer.</span></div><div class="profile-point"><b>AI Copilot settings</b><span>Control mode, risk preferences, universe and portfolio behaviour.</span></div><div class="profile-point"><b>Human ownership stays intact</b><span>AI can analyse and recommend. The decision remains yours.</span></div></div></div></div></section>
+<section class="container beta"><div class="beta-shell"><div class="section-kicker">PRIVATE BETA</div><h2>Your portfolio has data.<br><span class="gradient">Now give it intelligence.</span></h2><p>Join the early group helping shape Portfolio AI Copilot.</p><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header">Request Private Beta Access →</a></div></section>
 </main>
-
-<footer class="container">
-
-    <div class="footer-brand">
-        <img src="assets/logo.png"
-             alt="Portfolio AI Copilot logo">
-
-        <span>
-            © 2026 Portfolio AI Copilot
-        </span>
-    </div>
-
-    <div class="footer-links">
-        <a href="#product">Product</a>
-        <a href="#intelligence">Intelligence</a>
-        <a href="#how">How it works</a>
-    </div>
-
-</footer>
-
-</body>
-</html>
+<footer class="container"><div class="footer-brand"><img src="assets/logo.png" alt="Portfolio AI Copilot"><span>© 2026 Portfolio AI Copilot</span></div><div class="footer-links"><a href="#portfolio">Product</a><a href="#intelligence">Intelligence</a><a href="#how">How it works</a><a href="#control">Control</a></div></footer>
+</body></html>
