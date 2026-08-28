@@ -1,1787 +1,2398 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <meta
-    name="description"
-    content="Portfolio AI Copilot — intelligent portfolio monitoring, evidence-backed opportunities, and human-controlled decisions."
-  >
+<meta name="description"
+content="Portfolio AI Copilot — intelligent portfolio monitoring, evidence-backed opportunities, and human-controlled decisions.">
 
-  <meta name="theme-color" content="#080d18">
+<meta name="theme-color" content="#060910">
 
-  <title>Portfolio AI Copilot — Your portfolio, more intelligent.</title>
+<title>Portfolio AI Copilot — Your portfolio, more intelligent.</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #080d18;
-      --surface: #111a2a;
-      --surface-2: #172235;
-      --line: #263750;
+<style>
 
-      --text: #eef2f8;
-      --muted: #9aa7ba;
-      --soft: #c7d0de;
+:root{
+    --bg:#060910;
+    --surface:#0b111c;
+    --surface2:#101827;
+    --line:#1d2a3d;
+    --text:#f5f7fb;
+    --muted:#98a5b8;
+    --soft:#c3ccda;
 
-      --accent: #8d78ff;
-      --accent-blue: #79a9ff;
-      --green: #4fd19a;
+    --accent:#8d6cff;
+    --accent2:#5a9cff;
 
-      --shadow: 0 30px 100px rgba(0, 0, 0, 0.45);
-    }
+    --green:#48d7a0;
 
-    * {
-      box-sizing: border-box;
-    }
+    --shadow:0 30px 100px rgba(0,0,0,.46);
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+*{
+    box-sizing:border-box;
+}
 
-    body {
-      margin: 0;
-      background:
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+
+    background:
         radial-gradient(
-          900px 500px at 85% 0%,
-          rgba(90, 100, 255, 0.13),
-          transparent 65%
+            900px 500px at 50% -180px,
+            rgba(117,89,255,.20),
+            transparent 68%
         ),
         radial-gradient(
-          700px 500px at 10% 30%,
-          rgba(118, 83, 255, 0.08),
-          transparent 70%
+            700px 420px at 100% 18%,
+            rgba(49,121,255,.11),
+            transparent 72%
         ),
         var(--bg);
 
-      color: var(--text);
-      font-family: "DM Sans", sans-serif;
-      line-height: 1.5;
-    }
+    color:var(--text);
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    font-family:"DM Sans",sans-serif;
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    line-height:1.5;
+}
 
-    .container {
-      width: min(1180px, calc(100% - 48px));
-      margin: 0 auto;
-    }
+body:before{
+    content:"";
 
-    /* =========================
-       NAVIGATION
-    ========================== */
+    position:fixed;
 
-    .nav {
-      height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    inset:0;
 
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
+    pointer-events:none;
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-    }
+    opacity:.16;
 
-    .brand img {
-      width: 34px;
-      height: 34px;
-      object-fit: contain;
-    }
-
-    .brand-name {
-      font-family: "Manrope", sans-serif;
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-    }
-
-    .brand-tag {
-      margin-top: 2px;
-      color: #8490a2;
-      font-size: 8px;
-      letter-spacing: 1.2px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-
-      color: #aab4c3;
-      font-size: 12px;
-    }
-
-    .nav-links a:hover {
-      color: white;
-    }
-
-    .nav-cta {
-      padding: 10px 16px;
-      border: 1px solid rgba(141, 120, 255, 0.55);
-      border-radius: 10px;
-
-      background: rgba(141, 120, 255, 0.08);
-    }
-
-    /* =========================
-       HERO
-    ========================== */
-
-    .hero {
-      min-height: 720px;
-
-      display: grid;
-      grid-template-columns: 0.92fr 1.08fr;
-      align-items: center;
-      gap: 70px;
-
-      padding: 85px 0 50px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-
-      padding: 7px 12px;
-
-      border: 1px solid rgba(141, 120, 255, 0.35);
-      border-radius: 999px;
-
-      background: rgba(141, 120, 255, 0.08);
-
-      color: #c8bfff;
-
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-    }
-
-    .dot {
-      width: 6px;
-      height: 6px;
-
-      border-radius: 50%;
-      background: var(--green);
-
-      box-shadow: 0 0 12px rgba(79, 209, 154, 0.8);
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin: 0;
-      font-family: "Manrope", sans-serif;
-    }
-
-    .hero h1 {
-      margin: 22px 0 20px;
-
-      font-size: clamp(54px, 6vw, 78px);
-      line-height: 1.02;
-      letter-spacing: -4px;
-    }
-
-    .gradient {
-      background: linear-gradient(
-        110deg,
-        #c2aaff 0%,
-        #8d78ff 45%,
-        #78aaff 100%
-      );
-
-      -webkit-background-clip: text;
-      background-clip: text;
-
-      color: transparent;
-    }
-
-    .hero-copy {
-      max-width: 560px;
-
-      color: #aab5c5;
-
-      font-size: 16px;
-      line-height: 1.8;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-
-      margin: 28px 0 15px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-
-      padding: 13px 19px;
-
-      border-radius: 11px;
-
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .btn-primary {
-      background: linear-gradient(
-        135deg,
-        #8b70f5,
-        #719fff
-      );
-
-      box-shadow:
-        0 14px 35px rgba(104, 98, 255, 0.25);
-    }
-
-    .btn-secondary {
-      border: 1px solid #31435d;
-      background: rgba(17, 26, 42, 0.7);
-    }
-
-    .micro {
-      color: #6e7b8e;
-      font-size: 10px;
-    }
-
-    .hero-visual {
-      position: relative;
-      min-height: 580px;
-    }
-
-    .hero-glow {
-      position: absolute;
-      inset: 8% 5% 5%;
-
-      border-radius: 50%;
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(125, 100, 255, 0.22),
-          rgba(76, 130, 255, 0.08) 35%,
-          transparent 70%
-        );
-
-      filter: blur(25px);
-    }
-
-    .dashboard-frame {
-      position: absolute;
-
-      inset: 20px 0;
-
-      padding: 12px;
-
-      border: 1px solid #2b3c55;
-      border-radius: 26px;
-
-      background:
+    background-image:
         linear-gradient(
-          145deg,
-          #121c2d,
-          #0a111d
-        );
-
-      box-shadow: var(--shadow);
-
-      overflow: hidden;
-    }
-
-    .dashboard-bar {
-      height: 30px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      padding: 0 4px 9px;
-
-      color: #7f8ca0;
-      font-size: 9px;
-    }
-
-    .window-dots {
-      display: flex;
-      gap: 5px;
-    }
-
-    .window-dots span {
-      width: 6px;
-      height: 6px;
-
-      border-radius: 50%;
-      background: #35455d;
-    }
-
-    .dashboard-frame img {
-      width: 100%;
-      height: calc(100% - 30px);
-
-      object-fit: cover;
-      object-position: top;
-
-      border-radius: 17px;
-    }
-
-    /* =========================
-       TRUST ROW
-    ========================== */
-
-    .trust-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-
-      padding-bottom: 75px;
-
-      color: #8996a9;
-      font-size: 10px;
-    }
-
-    .trust-row strong {
-      color: #b5c0d0;
-      font-weight: 600;
-    }
-
-    .trust-divider {
-      width: 1px;
-      height: 14px;
-      background: #2c3b51;
-    }
-
-    /* =========================
-       GENERAL SECTIONS
-    ========================== */
-
-    .section {
-      padding: 70px 0;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .section-kicker {
-      color: #aa8dff;
-
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 1.7px;
-    }
-
-    .section-title {
-      margin-top: 10px;
-
-      font-size: 44px;
-      line-height: 1.08;
-      letter-spacing: -2px;
-    }
-
-    .section-copy {
-      max-width: 620px;
-
-      margin-top: 15px;
-
-      color: #8f9daf;
-
-      font-size: 13px;
-      line-height: 1.8;
-    }
-
-    .center .section-copy {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* =========================
-       PHONE SHOWCASE
-    ========================== */
-
-    .phone-stage {
-      position: relative;
-
-      height: 610px;
-
-      margin-top: 45px;
-    }
-
-    .phone {
-      position: absolute;
-      bottom: 0;
-
-      padding: 5px;
-
-      border: 1px solid #2b3b53;
-      border-radius: 31px;
-
-      background: #09111d;
-
-      box-shadow: 0 24px 70px rgba(0,0,0,0.5);
-
-      overflow: hidden;
-    }
-
-    .phone img {
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-
-      border-radius: 26px;
-    }
-
-    .p1 {
-      left: 0;
-      width: 18%;
-      height: 435px;
-
-      transform: rotate(-4deg);
-      opacity: 0.82;
-    }
-
-    .p2 {
-      left: 18%;
-      width: 20%;
-      height: 490px;
-
-      transform: rotate(-1.8deg);
-
-      z-index: 2;
-    }
-
-    .p3 {
-      left: 37%;
-      width: 26%;
-      height: 585px;
-
-      z-index: 5;
-    }
-
-    .p4 {
-      left: 62%;
-      width: 20%;
-      height: 490px;
-
-      transform: rotate(1.8deg);
-
-      z-index: 2;
-    }
-
-    .p5 {
-      right: 0;
-      width: 18%;
-      height: 435px;
-
-      transform: rotate(4deg);
-
-      opacity: 0.86;
-    }
-
-    /* =========================
-       PRODUCT FEATURES
-    ========================== */
-
-    .pillars {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-
-      margin-top: 35px;
-    }
-
-    .pillar {
-      padding: 25px;
-
-      border: 1px solid #24344b;
-      border-radius: 18px;
-
-      background:
-        linear-gradient(
-          150deg,
-          rgba(22, 32, 50, 0.95),
-          rgba(10, 17, 29, 0.95)
-        );
-    }
-
-    .pillar-num {
-      color: #9a83ff;
-
-      font-family: "Manrope", sans-serif;
-      font-size: 26px;
-      font-weight: 800;
-    }
-
-    .pillar h3 {
-      margin: 15px 0 7px;
-      font-size: 16px;
-    }
-
-    .pillar p {
-      margin: 0;
-
-      color: #8f9dae;
-
-      font-size: 11px;
-      line-height: 1.7;
-    }
-
-    /* =========================
-       INTELLIGENCE
-    ========================== */
-
-    .intelligence-shell {
-      padding: 36px;
-
-      border: 1px solid #25364e;
-      border-radius: 26px;
-
-      background:
-        linear-gradient(
-          145deg,
-          #121c2d,
-          #09111d
-        );
-    }
-
-    .intelligence-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 30px;
-    }
-
-    .engine-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-
-      margin-top: 30px;
-    }
-
-    .engine {
-      min-height: 165px;
-
-      padding: 18px;
-
-      border: 1px solid #293a52;
-      border-radius: 15px;
-
-      background: #121c2d;
-    }
-
-    .engine-icon {
-      width: 35px;
-      height: 35px;
-
-      display: grid;
-      place-items: center;
-
-      border: 1px solid #51467e;
-      border-radius: 10px;
-
-      background: #292544;
-      color: #c1afff;
-
-      font-weight: 800;
-    }
-
-    .engine h3 {
-      margin: 13px 0 6px;
-      font-size: 12px;
-    }
-
-    .engine p {
-      margin: 0;
-
-      color: #8695a8;
-
-      font-size: 10px;
-      line-height: 1.65;
-    }
-
-    /* =========================
-       WORKFLOW
-    ========================== */
-
-    .workflow-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-
-      gap: 10px;
-
-      margin-top: 38px;
-    }
-
-    .workflow-card {
-      position: relative;
-
-      padding: 24px 10px;
-
-      text-align: center;
-    }
-
-    .workflow-card:not(:last-child)::after {
-      content: "";
-
-      position: absolute;
-
-      top: 37px;
-      right: -5px;
-
-      width: 10px;
-      height: 1px;
-
-      background: #36475e;
-    }
-
-    .workflow-icon {
-      width: 56px;
-      height: 56px;
-
-      display: grid;
-      place-items: center;
-
-      margin: 0 auto 13px;
-
-      border: 1px solid #354861;
-      border-radius: 50%;
-
-      background: #121c2d;
-
-      color: #aa92ff;
-
-      font-size: 19px;
-    }
-
-    .workflow-card b {
-      font-family: "Manrope", sans-serif;
-      font-size: 12px;
-    }
-
-    .workflow-card p {
-      margin: 8px 0 0;
-
-      color: #8492a5;
-
-      font-size: 9px;
-      line-height: 1.6;
-    }
-
-    /* =========================
-       CONTROL
-    ========================== */
-
-    .decision-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .decision-copy,
-    .decision-screen {
-      border: 1px solid #263850;
-      border-radius: 24px;
-
-      background:
-        linear-gradient(
-          150deg,
-          #121c2d,
-          #09111d
-        );
-    }
-
-    .decision-copy {
-      padding: 38px;
-    }
-
-    .quote {
-      margin: 17px 0 20px;
-
-      font-family: "Manrope", sans-serif;
-      font-size: 31px;
-      font-weight: 700;
-      line-height: 1.25;
-      letter-spacing: -1.2px;
-    }
-
-    .decision-list {
-      display: grid;
-      gap: 10px;
-
-      margin-top: 25px;
-    }
-
-    .decision-item {
-      display: flex;
-      gap: 10px;
-
-      color: #9ca9bb;
-      font-size: 11px;
-    }
-
-    .decision-item span:first-child {
-      color: #a98fff;
-    }
-
-    .decision-screen {
-      display: flex;
-      justify-content: center;
-
-      padding: 18px;
-    }
-
-    .decision-screen img {
-      max-height: 620px;
-      width: auto;
-
-      border-radius: 27px;
-
-      box-shadow:
-        0 25px 70px rgba(0,0,0,0.45);
-    }
-
-    /* =========================
-       EXTRA APP SCREENS
-    ========================== */
-
-    .screens-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-
-      margin-top: 40px;
-    }
-
-    .screen-card {
-      display: flex;
-      justify-content: center;
-    }
-
-    .screen-card img {
-      width: 80%;
-      max-width: 270px;
-
-      border: 1px solid #2b3b53;
-      border-radius: 30px;
-
-      box-shadow:
-        0 24px 65px rgba(0,0,0,0.45);
-    }
-
-    /* =========================
-       BETA
-    ========================== */
-
-    .beta-shell {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 25px;
-
-      padding: 35px 40px;
-
-      border: 1px solid #35435b;
-      border-radius: 27px;
-
-      background:
-        radial-gradient(
-          500px 220px at 0 0,
-          rgba(141, 120, 255, 0.14),
-          transparent 72%
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
         ),
         linear-gradient(
-          145deg,
-          #121c2d,
-          #09111d
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
         );
+
+    background-size:42px 42px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 80%
+        );
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+}
+
+.container{
+    width:min(1180px,calc(100% - 40px));
+    margin:auto;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav{
+    height:84px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.06);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:50;
+
+    background:
+        rgba(6,9,16,.78);
+
+    backdrop-filter:
+        blur(18px);
+}
+
+.brand{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.brand img{
+    width:42px;
+    height:42px;
+
+    object-fit:contain;
+}
+
+.brand-name{
+    font:
+        800 18px/1
+        "Manrope",
+        sans-serif;
+
+    letter-spacing:-.45px;
+}
+
+.brand-tag{
+    font-size:10px;
+
+    letter-spacing:1.3px;
+
+    color:#8995a9;
+
+    margin-top:5px;
+}
+
+.nav-links{
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    font-size:13px;
+
+    color:#aeb9ca;
+}
+
+.nav-links a:not(.nav-cta):hover{
+    color:#fff;
+}
+
+.nav-cta{
+    padding:12px 19px;
+
+    border:
+        1px solid rgba(141,108,255,.5);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(141,108,255,.18),
+            rgba(90,156,255,.12)
+        );
+
+    border-radius:11px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    padding:80px 0 55px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+    min-height:760px;
+}
+
+.eyebrow{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 13px;
+
+    border-radius:999px;
+
+    border:
+        1px solid rgba(141,108,255,.35);
+
+    background:
+        rgba(141,108,255,.08);
+
+    color:#c8b9ff;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+}
+
+.dot{
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:
+        0 0 14px
+        rgba(72,215,160,.65);
+}
+
+h1,
+h2,
+h3{
+    font-family:
+        "Manrope",
+        sans-serif;
+
+    margin:0;
+}
+
+.hero h1{
+    font-size:
+        clamp(58px,6.2vw,88px);
+
+    line-height:1.02;
+
+    letter-spacing:-4.5px;
+
+    margin:24px 0;
+}
+
+.gradient{
+
+    background:
+        linear-gradient(
+            110deg,
+            #c8aaff 0%,
+            #8d6cff 42%,
+            #63a8ff 100%
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+}
+
+.hero-copy{
+    max-width:600px;
+
+    font-size:18px;
+
+    line-height:1.75;
+
+    color:#a9b5c7;
+}
+
+.hero-actions{
+
+    display:flex;
+
+    gap:14px;
+
+    margin:32px 0 18px;
+}
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:15px 22px;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:
+        transform .2s ease,
+        opacity .2s ease;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+
+    background:
+        linear-gradient(
+            135deg,
+            #8a65ff,
+            #4f91ff
+        );
+
+    box-shadow:
+        0 12px 32px
+        rgba(92,96,255,.24);
+}
+
+.btn-secondary{
+
+    border:
+        1px solid #2a3b53;
+
+    background:
+        rgba(13,20,32,.7);
+}
+
+.micro{
+    font-size:11px;
+
+    color:#66758b;
+}
+
+
+/* =========================
+   HERO VISUAL
+========================= */
+
+.hero-visual{
+
+    position:relative;
+
+    min-height:620px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.halo{
+
+    position:absolute;
+
+    width:620px;
+
+    height:620px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(123,86,255,.24),
+            rgba(76,124,255,.08) 38%,
+            transparent 70%
+        );
+
+    filter:blur(18px);
+}
+
+.app-window{
+
+    position:relative;
+
+    width:min(100%,620px);
+
+    height:580px;
+
+    border:
+        1px solid #2b3d56;
+
+    border-radius:26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d1625,
+            #08101b
+        );
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.5);
+
+    padding:14px;
+
+    overflow:hidden;
+
+    z-index:2;
+}
+
+.window-bar{
+
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 8px 10px;
+
+    color:#8290a4;
+
+    font-size:11px;
+}
+
+.window-dots{
+
+    display:flex;
+
+    gap:6px;
+}
+
+.window-dots span{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:#304056;
+}
+
+.window-live{
+
+    color:var(--green);
+
+    font-weight:700;
+}
+
+
+/* IMPORTANT: PREVENT BLUR */
+
+.app-window img{
+
+    display:block;
+
+    width:100%;
+
+    height:calc(100% - 34px);
+
+    object-fit:contain;
+
+    object-position:center top;
+
+    border-radius:17px;
+
+    image-rendering:auto;
+}
+
+
+/* =========================
+   TRUST ROW
+========================= */
+
+.trust-row{
+
+    display:flex;
+
+    gap:24px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    color:#7f8da2;
+
+    font-size:12px;
+
+    padding-bottom:70px;
+}
+
+.trust-row strong{
+
+    color:#b7c2d2;
+
+    font-weight:600;
+}
+
+.trust-divider{
+
+    width:1px;
+
+    height:16px;
+
+    background:#29384d;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-kicker{
+
+    font-size:11px;
+
+    letter-spacing:1.8px;
+
+    color:#a887ff;
+
+    font-weight:800;
+}
+
+.section-title{
+
+    font-size:52px;
+
+    line-height:1.1;
+
+    letter-spacing:-2.5px;
+
+    margin-top:12px;
+}
+
+.section-copy{
+
+    max-width:650px;
+
+    color:#9ba8ba;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin-top:18px;
+}
+
+.center{
+    text-align:center;
+}
+
+.center .section-copy{
+
+    margin-left:auto;
+
+    margin-right:auto;
+}
+
+
+/* =========================
+   PRODUCT SHOWCASE
+========================= */
+
+.showcase{
+
+    padding:70px 0 110px;
+}
+
+.phone-stage{
+
+    height:610px;
+
+    position:relative;
+
+    margin-top:50px;
+}
+
+.phone{
+
+    position:absolute;
+
+    bottom:0;
+
+    padding:6px;
+
+    border:
+        1px solid #2a3950;
+
+    background:#070f19;
+
+    border-radius:33px;
+
+    box-shadow:
+        0 24px 70px
+        rgba(0,0,0,.52);
+
+    overflow:hidden;
+}
+
+.phone img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:top;
+
+    border-radius:27px;
+}
+
+.phone.p1{
+
+    left:1%;
+
+    width:18%;
+
+    height:450px;
+
+    transform:rotate(-3deg);
+
+    opacity:.84;
+}
+
+.phone.p2{
+
+    left:19%;
+
+    width:20%;
+
+    height:510px;
+
+    transform:rotate(-1deg);
+
+    z-index:2;
+}
+
+.phone.p3{
+
+    left:37%;
+
+    width:26%;
+
+    height:595px;
+
+    z-index:6;
+}
+
+.phone.p4{
+
+    left:61%;
+
+    width:20%;
+
+    height:510px;
+
+    transform:rotate(1deg);
+
+    z-index:3;
+}
+
+.phone.p5{
+
+    right:1%;
+
+    width:18%;
+
+    height:460px;
+
+    transform:rotate(3deg);
+
+    z-index:4;
+
+    opacity:.9;
+}
+
+
+/* =========================
+   THREE PILLARS
+========================= */
+
+.pillars{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:16px;
+
+    margin-top:42px;
+}
+
+.pillar{
+
+    padding:28px;
+
+    border-radius:18px;
+
+    border:
+        1px solid #1d2c41;
+
+    background:
+        linear-gradient(
+            160deg,
+            rgba(15,24,38,.9),
+            rgba(8,14,24,.95)
+        );
+}
+
+.pillar-num{
+
+    font:
+        800 28px/1
+        "Manrope";
+
+    color:#8f77ff;
+}
+
+.pillar h3{
+
+    font-size:18px;
+
+    margin:16px 0 8px;
+}
+
+.pillar p{
+
+    font-size:13px;
+
+    color:#8f9caf;
+
+    line-height:1.7;
+
+    margin:0;
+}
+
+
+/* =========================
+   INTELLIGENCE
+========================= */
+
+.evidence{
+
+    padding:40px 0 110px;
+}
+
+.evidence-shell{
+
+    border:
+        1px solid #1e2e44;
+
+    background:
+        linear-gradient(
+            150deg,
+            #0c1524,
+            #080e18
+        );
+
+    border-radius:26px;
+
+    padding:40px;
+
+    box-shadow:
+        0 24px 90px
+        rgba(0,0,0,.24);
+}
+
+.evidence-head{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+    align-items:end;
+}
+
+.engine-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:14px;
+
+    margin-top:34px;
+}
+
+.engine{
+
+    min-height:180px;
+
+    border:
+        1px solid #203147;
+
+    border-radius:15px;
+
+    background:#0d1726;
+
+    padding:21px;
+}
+
+.engine-icon{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:11px;
+
+    display:grid;
+
+    place-items:center;
+
+    border:
+        1px solid #3c3568;
+
+    background:#29234a;
+
+    color:#beabff;
+
+    font-weight:800;
+}
+
+.engine h3{
+
+    font-size:14px;
+
+    margin:14px 0 7px;
+}
+
+.engine p{
+
+    margin:0;
+
+    color:#8593a7;
+
+    font-size:11px;
+
+    line-height:1.7;
+}
+
+.engine:nth-child(2) .engine-icon,
+.engine:nth-child(6) .engine-icon{
+
+    border-color:#234a79;
+
+    background:#122a48;
+
+    color:#6eaeff;
+}
+
+.engine:nth-child(3) .engine-icon,
+.engine:nth-child(7) .engine-icon{
+
+    border-color:#24594d;
+
+    background:#102f29;
+
+    color:#62dfad;
+}
+
+.engine:nth-child(4) .engine-icon{
+
+    border-color:#715320;
+
+    background:#34260f;
+
+    color:#ffbd50;
+}
+
+
+/* =========================
+   WORKFLOW
+========================= */
+
+.workflow{
+
+    padding:0 0 110px;
+}
+
+.workflow-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:10px;
+
+    margin-top:42px;
+}
+
+.workflow-card{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:28px 12px;
+}
+
+.workflow-card:not(:last-child):after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-5px;
+
+    top:40px;
+
+    width:10px;
+
+    height:1px;
+
+    background:#33445b;
+}
+
+.workflow-card span{
+
+    display:grid;
+
+    place-items:center;
+
+    margin:0 auto 15px;
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:50%;
+
+    border:
+        1px solid #31425a;
+
+    background:#0d1726;
+
+    color:#ae91ff;
+
+    font-size:22px;
+}
+
+.workflow-card b{
+
+    font:
+        700 14px
+        "Manrope";
+}
+
+.workflow-card p{
+
+    font-size:11px;
+
+    color:#8190a3;
+
+    line-height:1.7;
+
+    margin:9px 0 0;
+}
+
+
+/* =========================
+   HUMAN CONTROL
+========================= */
+
+.decision{
+
+    padding:0 0 110px;
+}
+
+.decision-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1.02fr .98fr;
+
+    gap:20px;
+}
+
+.decision-copy,
+.decision-screen{
+
+    border:
+        1px solid #1f2e43;
+
+    background:
+        linear-gradient(
+            155deg,
+            #0c1523,
+            #080e18
+        );
+
+    border-radius:24px;
+
+    overflow:hidden;
+}
+
+.decision-copy{
+
+    padding:42px;
+}
+
+.quote{
+
+    font:
+        700 36px/1.25
+        "Manrope";
+
+    letter-spacing:-1.5px;
+
+    margin:18px 0 24px;
+}
+
+.decision-list{
+
+    display:grid;
+
+    gap:13px;
+
+    margin-top:28px;
+}
+
+.decision-item{
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:flex-start;
+
+    font-size:13px;
+
+    color:#99a6b8;
+}
+
+.decision-item i{
+
+    font-style:normal;
+
+    color:#9c81ff;
+}
+
+.decision-screen{
+
+    padding:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.decision-screen img{
+
+    max-height:650px;
+
+    width:auto;
+
+    border-radius:27px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.5);
+}
+
+
+/* =========================
+   BETA CTA
+========================= */
+
+.beta{
+
+    padding:20px 0 90px;
+}
+
+.beta-shell{
+
+    border:
+        1px solid #2e3b53;
+
+    border-radius:28px;
+
+    padding:40px;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr auto;
+
+    align-items:center;
+
+    gap:30px;
+
+    background:
+
+        radial-gradient(
+            500px 220px at 0 0,
+            rgba(141,108,255,.12),
+            transparent 72%
+        ),
+
+        linear-gradient(
+            145deg,
+            #0e1624,
+            #080e18
+        );
+}
+
+.beta-shell h2{
+
+    font-size:38px;
+
+    letter-spacing:-1.8px;
+}
+
+.beta-shell p{
+
+    margin:9px 0 0;
+
+    color:#8d9bae;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    padding:25px 0 45px;
+
+    color:#66758a;
+
+    font-size:11px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.footer-brand{
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+}
+
+.footer-brand img{
+
+    width:36px;
+
+    height:36px;
+}
+
+.footer-links{
+
+    display:flex;
+
+    gap:24px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1000px){
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        padding-top:65px;
     }
 
-    .beta-shell h2 {
-      margin-top: 8px;
+    .hero-visual{
 
-      font-size: 32px;
-      letter-spacing: -1.5px;
+        min-height:580px;
     }
 
-    .beta-shell p {
-      margin: 7px 0 0;
+    .engine-grid{
 
-      color: #8d9bae;
-      font-size: 11px;
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    /* =========================
-       FOOTER
-    ========================== */
+    .phone-stage{
 
-    footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      padding: 30px 0 40px;
-
-      color: #68768a;
-      font-size: 10px;
+        height:530px;
     }
 
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 9px;
+    .phone.p1{
+        height:390px;
     }
 
-    .footer-brand img {
-      width: 30px;
-      height: 30px;
+    .phone.p2{
+        height:445px;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 22px;
+    .phone.p3{
+        height:520px;
     }
 
-    /* =========================
-       TABLET
-    ========================== */
-
-    @media (max-width: 1000px) {
-
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 60px;
-      }
-
-      .hero-visual {
-        min-height: 540px;
-      }
-
-      .engine-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .decision-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .screens-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .workflow-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .workflow-card:not(:last-child)::after {
-        display: none;
-      }
+    .phone.p4{
+        height:445px;
     }
 
-    /* =========================
-       MOBILE
-    ========================== */
-
-    @media (max-width: 720px) {
-
-      .container {
-        width: calc(100% - 28px);
-      }
-
-      .nav {
-        height: 68px;
-      }
-
-      .nav-links a:not(.nav-cta) {
-        display: none;
-      }
-
-      .brand-tag {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 48px;
-      }
-
-      .hero h1 {
-        font-size: 48px;
-        letter-spacing: -2.8px;
-      }
-
-      .hero-copy {
-        font-size: 14px;
-      }
-
-      .hero-actions {
-        flex-wrap: wrap;
-      }
-
-      .hero-visual {
-        min-height: 390px;
-      }
-
-      .dashboard-frame {
-        inset: 0;
-      }
-
-      .trust-row {
-        padding-bottom: 45px;
-      }
-
-      .section-title {
-        font-size: 34px;
-      }
-
-      .phone-stage {
-        height: 500px;
-        overflow: hidden;
-      }
-
-      .p1 {
-        left: -8%;
-        width: 31%;
-        height: 320px;
-      }
-
-      .p2 {
-        left: 18%;
-        width: 35%;
-        height: 390px;
-      }
-
-      .p3 {
-        left: 31%;
-        width: 44%;
-        height: 490px;
-      }
-
-      .p4 {
-        left: 63%;
-        width: 35%;
-        height: 375px;
-      }
-
-      .p5 {
-        right: -8%;
-        width: 30%;
-        height: 330px;
-      }
-
-      .pillars {
-        grid-template-columns: 1fr;
-      }
-
-      .intelligence-shell {
-        padding: 25px 16px;
-      }
-
-      .intelligence-head {
-        display: block;
-      }
-
-      .engine-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .engine {
-        min-height: 150px;
-        padding: 15px;
-      }
-
-      .screens-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .beta-shell {
-        grid-template-columns: 1fr;
-
-        padding: 30px 22px;
-
-        text-align: center;
-      }
-
-      .beta-shell .btn {
-        width: 100%;
-      }
-
-      footer {
-        display: block;
-      }
-
-      .footer-links {
-        flex-wrap: wrap;
-        margin-top: 15px;
-      }
+    .phone.p5{
+        height:400px;
     }
 
-    @media (max-width: 430px) {
+    .workflow-grid{
 
-      .hero h1 {
-        font-size: 41px;
-      }
-
-      .engine-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .decision-copy {
-        padding: 28px;
-      }
-
-      .quote {
-        font-size: 26px;
-      }
+        grid-template-columns:1fr;
     }
 
-  </style>
+    .workflow-card:not(:last-child):after{
+
+        display:none;
+    }
+
+    .decision-grid{
+
+        grid-template-columns:1fr;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:720px){
+
+    .container{
+
+        width:calc(100% - 32px);
+    }
+
+    .nav{
+
+        height:72px;
+    }
+
+    .nav-links a:not(.nav-cta){
+
+        display:none;
+    }
+
+    .brand img{
+
+        width:38px;
+        height:38px;
+    }
+
+    .brand-name{
+
+        font-size:16px;
+    }
+
+    .brand-tag{
+
+        display:none;
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        padding:52px 0 30px;
+
+        gap:40px;
+
+        min-height:auto;
+    }
+
+    .hero h1{
+
+        font-size:52px;
+
+        letter-spacing:-3px;
+    }
+
+    .hero-copy{
+
+        font-size:16px;
+    }
+
+    .hero-actions{
+
+        flex-wrap:wrap;
+    }
+
+    .hero-visual{
+
+        min-height:480px;
+    }
+
+    .app-window{
+
+        width:100%;
+
+        height:470px;
+
+        border-radius:22px;
+
+        padding:10px;
+    }
+
+    .window-bar{
+
+        font-size:10px;
+    }
+
+    .trust-row{
+
+        justify-content:flex-start;
+
+        padding-bottom:50px;
+
+        font-size:11px;
+    }
+
+    .section-title{
+
+        font-size:38px;
+    }
+
+    .section-copy{
+
+        font-size:14px;
+    }
+
+    .showcase{
+
+        padding-top:45px;
+    }
+
+    .phone-stage{
+
+        height:500px;
+
+        overflow:hidden;
+    }
+
+    .phone.p1{
+
+        left:-8%;
+
+        width:31%;
+
+        height:320px;
+    }
+
+    .phone.p2{
+
+        left:18%;
+
+        width:35%;
+
+        height:390px;
+    }
+
+    .phone.p3{
+
+        left:31%;
+
+        width:44%;
+
+        height:490px;
+    }
+
+    .phone.p4{
+
+        left:63%;
+
+        width:35%;
+
+        height:375px;
+    }
+
+    .phone.p5{
+
+        right:-8%;
+
+        width:30%;
+
+        height:335px;
+    }
+
+    .pillars{
+
+        grid-template-columns:1fr;
+    }
+
+    .evidence-shell{
+
+        padding:28px 18px;
+    }
+
+    .evidence-head{
+
+        display:block;
+    }
+
+    .engine-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .engine{
+
+        min-height:auto;
+    }
+
+    .workflow-card{
+
+        padding:22px 12px;
+    }
+
+    .decision-copy{
+
+        padding:30px;
+    }
+
+    .quote{
+
+        font-size:29px;
+    }
+
+    .decision-screen{
+
+        padding:15px;
+    }
+
+    .decision-screen img{
+
+        max-width:100%;
+
+        height:auto;
+    }
+
+    .beta-shell{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        padding:32px 22px;
+    }
+
+    .beta-shell h2{
+
+        font-size:32px;
+    }
+
+    .beta-shell .btn{
+
+        width:100%;
+    }
+
+    footer{
+
+        display:block;
+    }
+
+    .footer-links{
+
+        margin-top:18px;
+
+        flex-wrap:wrap;
+    }
+}
+
+
+@media(max-width:430px){
+
+    .hero h1{
+
+        font-size:44px;
+    }
+
+    .hero-visual{
+
+        min-height:420px;
+    }
+
+    .app-window{
+
+        height:410px;
+    }
+
+    .phone-stage{
+
+        height:440px;
+    }
+
+    .phone.p1{
+        height:275px;
+    }
+
+    .phone.p2{
+        height:335px;
+    }
+
+    .phone.p3{
+        height:430px;
+    }
+
+    .phone.p4{
+        height:325px;
+    }
+
+    .phone.p5{
+        height:285px;
+    }
+}
+
+</style>
 </head>
+
 
 <body>
 
-  <!-- NAVIGATION -->
 
-  <header class="container nav">
+<header class="container nav">
 
     <a class="brand" href="#top">
 
-      <img
-        src="assets/logo.png"
-        alt="Portfolio AI Copilot"
-      >
+        <img
+            src="assets/logo.png"
+            alt="Portfolio AI Copilot">
 
-      <span>
+        <span>
 
-        <span class="brand-name">
-          Portfolio AI Copilot
+            <div class="brand-name">
+                Portfolio AI Copilot
+            </div>
+
+            <div class="brand-tag">
+                AI CO-PILOT · YOU STAY IN CONTROL
+            </div>
+
         </span>
-
-        <span class="brand-tag">
-          AI CO-PILOT · YOU STAY IN CONTROL
-        </span>
-
-      </span>
 
     </a>
 
+
     <nav class="nav-links">
 
-      <a href="#product">Product</a>
-      <a href="#intelligence">Intelligence</a>
-      <a href="#how">How it works</a>
-      <a href="#control">Control</a>
+        <a href="#product">Product</a>
 
-      <a
-        class="nav-cta"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header"
-        target="_blank"
-        rel="noopener"
-      >
-        Join Private Beta
-      </a>
+        <a href="#intelligence">Intelligence</a>
+
+        <a href="#how">How it works</a>
+
+        <a href="#control">Control</a>
+
+
+        <a
+            class="nav-cta"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header">
+
+            Join Private Beta
+
+        </a>
 
     </nav>
 
-  </header>
+</header>
 
 
-  <main id="top">
+<main id="top">
 
-    <!-- HERO -->
 
-    <section class="container hero" id="product">
+<!-- HERO -->
 
-      <div>
+<section
+    class="container hero"
+    id="product">
+
+    <div>
 
         <span class="eyebrow">
-          <span class="dot"></span>
-          PRIVATE BETA
+
+            <span class="dot"></span>
+
+            PRIVATE BETA
+
         </span>
 
+
         <h1>
-          Your portfolio.<br>
-          <span class="gradient">
-            More intelligent.
-          </span>
+
+            Your portfolio.<br>
+
+            <span class="gradient">
+                More intelligent.
+            </span>
+
         </h1>
 
+
         <p class="hero-copy">
-          Portfolio AI Copilot brings portfolio context,
-          market intelligence and evidence-backed opportunities
-          into one clear decision layer — so you know what
-          deserves attention and why.
+
+            Portfolio AI Copilot brings portfolio context,
+            market intelligence and evidence-backed opportunities
+            into one clear decision layer — so you know what
+            deserves attention and why.
+
         </p>
+
 
         <div class="hero-actions">
 
-          <a
-            class="btn btn-primary"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header"
-            target="_blank"
-            rel="noopener"
-          >
-            Join Private Beta →
-          </a>
+            <a
+                class="btn btn-primary"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header">
 
-          <a
-            class="btn btn-secondary"
-            href="#how"
-          >
-            See how it works
-          </a>
+                Join Private Beta →
+
+            </a>
+
+
+            <a
+                class="btn btn-secondary"
+                href="#how">
+
+                See how it works
+
+            </a>
 
         </div>
+
 
         <div class="micro">
-          No black-box decisions. AI provides intelligence. You stay in control.
-        </div>
 
-      </div>
-
-
-      <div class="hero-visual">
-
-        <div class="hero-glow"></div>
-
-        <div class="dashboard-frame">
-
-          <div class="dashboard-bar">
-
-            <div class="window-dots">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-            <span>
-              Portfolio AI Copilot
-            </span>
-
-            <span style="color:#4fd19a;">
-              ● LIVE
-            </span>
-
-          </div>
-
-          <img
-            src="assets/home.png"
-            alt="Portfolio AI Copilot home dashboard"
-          >
+            No blind black-box decisions.
+            AI provides intelligence. You stay in control.
 
         </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- TRUST -->
-
-    <div class="container trust-row">
-
-      <strong>Portfolio-aware intelligence</strong>
-
-      <span class="trust-divider"></span>
-
-      <strong>Evidence-backed opportunities</strong>
-
-      <span class="trust-divider"></span>
-
-      <strong>Human-controlled decisions</strong>
-
-      <span class="trust-divider"></span>
-
-      <strong>Built for long-term investors</strong>
 
     </div>
 
 
-    <!-- PRODUCT -->
+    <div class="hero-visual">
 
-    <section class="container section">
-
-      <div class="center">
-
-        <div class="section-kicker">
-          THE PRODUCT
-        </div>
-
-        <h2 class="section-title">
-          One copilot across the journey.
-        </h2>
-
-        <p class="section-copy">
-          From understanding your portfolio to discovering
-          opportunities and reviewing decisions, everything
-          stays connected in one intelligent experience.
-        </p>
-
-      </div>
+        <div class="halo"></div>
 
 
-      <div class="phone-stage">
+        <div class="app-window">
 
-        <div class="phone p1">
-          <img
-            src="assets/profile.png"
-            alt="Profile and settings"
-          >
-        </div>
+            <div class="window-bar">
 
-        <div class="phone p2">
-          <img
-            src="assets/ai-insights.png"
-            alt="AI insights"
-          >
-        </div>
+                <div class="window-dots">
 
-        <div class="phone p3">
-          <img
-            src="assets/home.png"
-            alt="Portfolio AI Copilot home"
-          >
-        </div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
-        <div class="phone p4">
-          <img
-            src="assets/portfolio.png"
-            alt="Portfolio dashboard"
-          >
-        </div>
-
-        <div class="phone p5">
-          <img
-            src="assets/ai-opportunity.png"
-            alt="AI opportunity"
-          >
-        </div>
-
-      </div>
+                </div>
 
 
-      <div class="pillars">
-
-        <article class="pillar">
-
-          <div class="pillar-num">
-            01
-          </div>
-
-          <h3>
-            Understand the portfolio
-          </h3>
-
-          <p>
-            See what is gaining, losing,
-            concentrated or needs your attention.
-          </p>
-
-        </article>
+                <div>
+                    Portfolio AI Copilot
+                </div>
 
 
-        <article class="pillar">
+                <div class="window-live">
+                    ● LIVE
+                </div>
 
-          <div class="pillar-num">
-            02
-          </div>
-
-          <h3>
-            Surface opportunities
-          </h3>
-
-          <p>
-            AI identifies potential opportunities
-            and explains the evidence behind them.
-          </p>
-
-        </article>
-
-
-        <article class="pillar">
-
-          <div class="pillar-num">
-            03
-          </div>
-
-          <h3>
-            Decide with context
-          </h3>
-
-          <p>
-            Portfolio context, market intelligence
-            and evidence come together before action.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- INTELLIGENCE -->
-
-    <section
-      class="container section"
-      id="intelligence"
-    >
-
-      <div class="intelligence-shell">
-
-        <div class="intelligence-head">
-
-          <div>
-
-            <div class="section-kicker">
-              8-LAYER INTELLIGENCE
             </div>
 
-            <h2 class="section-title">
-              More evidence.<br>
-              Less noise.
-            </h2>
 
-          </div>
+            <img
+                src="assets/home.png"
+                alt="Portfolio AI Copilot home dashboard">
 
-          <p class="section-copy">
-            Multiple independent intelligence layers combine
-            market, company and portfolio signals into
-            an explainable view.
-          </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRUST ROW -->
+
+<div class="container trust-row">
+
+    <strong>
+        Portfolio-aware intelligence
+    </strong>
+
+    <span class="trust-divider"></span>
+
+    <strong>
+        Evidence-backed opportunities
+    </strong>
+
+    <span class="trust-divider"></span>
+
+    <strong>
+        Human-controlled decisions
+    </strong>
+
+    <span class="trust-divider"></span>
+
+    <strong>
+        Built for long-term investors
+    </strong>
+
+</div>
+
+
+<!-- PRODUCT SHOWCASE -->
+
+<section class="container showcase">
+
+    <div class="center">
+
+        <div class="section-kicker">
+            THE PRODUCT
+        </div>
+
+
+        <h2 class="section-title">
+
+            One copilot across the journey.
+
+        </h2>
+
+
+        <p class="section-copy">
+
+            From your first market signal to the final
+            holding decision, the experience stays focused
+            on one thing: turning scattered information
+            into useful portfolio context.
+
+        </p>
+
+    </div>
+
+
+    <div class="phone-stage">
+
+
+        <div class="phone p1">
+
+            <img
+                src="assets/profile.png"
+                alt="Profile and AI Copilot settings">
+
+        </div>
+
+
+        <div class="phone p2">
+
+            <img
+                src="assets/ai-insights.png"
+                alt="AI Insights">
+
+        </div>
+
+
+        <div class="phone p3">
+
+            <img
+                src="assets/home.png"
+                alt="Portfolio AI Copilot home">
+
+        </div>
+
+
+        <div class="phone p4">
+
+            <img
+                src="assets/portfolio.png"
+                alt="Portfolio">
+
+        </div>
+
+
+        <div class="phone p5">
+
+            <img
+                src="assets/ai-opportunity.png"
+                alt="AI Opportunity">
+
+        </div>
+
+
+    </div>
+
+
+    <div class="pillars">
+
+
+        <article class="pillar">
+
+            <div class="pillar-num">
+                01
+            </div>
+
+            <h3>
+                Understand the portfolio
+            </h3>
+
+            <p>
+
+                See what is gaining, losing,
+                concentrated or asking for
+                attention before you act.
+
+            </p>
+
+        </article>
+
+
+        <article class="pillar">
+
+            <div class="pillar-num">
+                02
+            </div>
+
+            <h3>
+                Surface the opportunity
+            </h3>
+
+            <p>
+
+                AI identifies opportunities and explains
+                the strongest evidence behind each one.
+
+            </p>
+
+        </article>
+
+
+        <article class="pillar">
+
+            <div class="pillar-num">
+                03
+            </div>
+
+            <h3>
+                Decide with context
+            </h3>
+
+            <p>
+
+                Your portfolio, the market and the evidence
+                come together before an action is taken.
+
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- INTELLIGENCE -->
+
+<section
+    class="container evidence"
+    id="intelligence">
+
+    <div class="evidence-shell">
+
+
+        <div class="evidence-head">
+
+            <div>
+
+                <div class="section-kicker">
+                    8-LAYER INTELLIGENCE
+                </div>
+
+
+                <h2 class="section-title">
+
+                    More evidence.<br>
+                    Less noise.
+
+                </h2>
+
+            </div>
+
+
+            <p class="section-copy">
+
+                Independent intelligence layers combine
+                market, company and portfolio signals
+                into an explainable view — not a single
+                mysterious score.
+
+            </p>
 
         </div>
 
 
         <div class="engine-grid">
 
-          <article class="engine">
 
-            <div class="engine-icon">↗</div>
+            <article class="engine">
 
-            <h3>Technical Evidence</h3>
+                <div class="engine-icon">↗</div>
 
-            <p>
-              Trend, momentum, relative strength
-              and price behaviour.
-            </p>
+                <h3>
+                    Technical Evidence
+                </h3>
 
-          </article>
+                <p>
+                    Trend, momentum, relative strength
+                    and price behaviour.
+                </p>
 
-
-          <article class="engine">
-
-            <div class="engine-icon">▥</div>
-
-            <h3>Fundamental Evidence</h3>
-
-            <p>
-              Financial quality, growth
-              and business health.
-            </p>
-
-          </article>
+            </article>
 
 
-          <article class="engine">
+            <article class="engine">
 
-            <div class="engine-icon">▮</div>
+                <div class="engine-icon">▥</div>
 
-            <h3>Earnings Intelligence</h3>
+                <h3>
+                    Fundamental Evidence
+                </h3>
 
-            <p>
-              Results, growth momentum
-              and management outlook.
-            </p>
+                <p>
+                    Financial quality, growth
+                    and business health.
+                </p>
 
-          </article>
-
-
-          <article class="engine">
-
-            <div class="engine-icon">◉</div>
-
-            <h3>Institutional Activity</h3>
-
-            <p>
-              Institutional flows and
-              positioning context.
-            </p>
-
-          </article>
+            </article>
 
 
-          <article class="engine">
+            <article class="engine">
 
-            <div class="engine-icon">▣</div>
+                <div class="engine-icon">▮</div>
 
-            <h3>News Intelligence</h3>
+                <h3>
+                    Earnings Intelligence
+                </h3>
 
-            <p>
-              Material events, news signals
-              and market sentiment.
-            </p>
+                <p>
+                    Results, growth momentum
+                    and management outlook.
+                </p>
 
-          </article>
-
-
-          <article class="engine">
-
-            <div class="engine-icon">◔</div>
-
-            <h3>Sector Intelligence</h3>
-
-            <p>
-              Sector leadership, weakness
-              and broader trends.
-            </p>
-
-          </article>
+            </article>
 
 
-          <article class="engine">
+            <article class="engine">
 
-            <div class="engine-icon">◎</div>
+                <div class="engine-icon">◉</div>
 
-            <h3>Market &amp; Macro</h3>
+                <h3>
+                    Institutional Activity
+                </h3>
 
-            <p>
-              Market breadth, volatility
-              and wider context.
-            </p>
+                <p>
+                    Institutional flows and
+                    positioning context.
+                </p>
 
-          </article>
+            </article>
 
 
-          <article class="engine">
+            <article class="engine">
 
-            <div class="engine-icon">◈</div>
+                <div class="engine-icon">▣</div>
 
-            <h3>Portfolio Intelligence</h3>
+                <h3>
+                    News Intelligence
+                </h3>
 
-            <p>
-              Portfolio fit, concentration,
-              allocation and impact.
-            </p>
+                <p>
+                    Material events, news signals
+                    and market sentiment.
+                </p>
 
-          </article>
+            </article>
+
+
+            <article class="engine">
+
+                <div class="engine-icon">◔</div>
+
+                <h3>
+                    Sector Intelligence
+                </h3>
+
+                <p>
+                    Leadership, weakness and
+                    sector-level trends.
+                </p>
+
+            </article>
+
+
+            <article class="engine">
+
+                <div class="engine-icon">◎</div>
+
+                <h3>
+                    Market &amp; Macro
+                </h3>
+
+                <p>
+                    Market breadth, volatility
+                    and wider context.
+                </p>
+
+            </article>
+
+
+            <article class="engine">
+
+                <div class="engine-icon">◈</div>
+
+                <h3>
+                    Portfolio Intelligence
+                </h3>
+
+                <p>
+                    Fit, concentration, allocation
+                    and portfolio impact.
+                </p>
+
+            </article>
+
 
         </div>
 
-      </div>
+    </div>
 
-    </section>
+</section>
 
 
-    <!-- HOW IT WORKS -->
+<!-- HOW IT WORKS -->
 
-    <section
-      class="container section"
-      id="how"
-    >
+<section
+    class="container workflow"
+    id="how">
 
-      <div class="center">
+
+    <div class="center">
 
         <div class="section-kicker">
-          HOW IT WORKS
+            HOW IT WORKS
         </div>
+
 
         <h2 class="section-title">
-          Intelligence first. You decide.
+
+            Intelligence first.
+            You decide.
+
         </h2>
 
+
         <p class="section-copy">
-          The copilot does the heavy lifting
-          without taking the decision away from you.
+
+            The copilot does the heavy lifting
+            without taking the decision away from you.
+
         </p>
 
-      </div>
+    </div>
 
 
-      <div class="workflow-grid">
+    <div class="workflow-grid">
+
 
         <div class="workflow-card">
 
-          <div class="workflow-icon">⌕</div>
+            <span>⌕</span>
 
-          <b>We scan</b>
+            <b>We scan</b>
 
-          <p>
-            Monitor the market and your portfolio.
-          </p>
+            <p>
+                Continuously look across the market
+                and your portfolio.
+            </p>
 
         </div>
 
 
         <div class="workflow-card">
 
-          <div class="workflow-icon">◇</div>
+            <span>◇</span>
 
-          <b>We analyse</b>
+            <b>We analyse</b>
 
-          <p>
-            Apply multiple independent evidence layers.
-          </p>
-
-        </div>
-
-
-        <div class="workflow-card">
-
-          <div class="workflow-icon">◉</div>
-
-          <b>You review</b>
-
-          <p>
-            See the signal, context and evidence.
-          </p>
+            <p>
+                Apply multiple independent
+                evidence layers.
+            </p>
 
         </div>
 
 
         <div class="workflow-card">
 
-          <div class="workflow-icon">↗</div>
+            <span>◉</span>
 
-          <b>You decide</b>
+            <b>You review</b>
 
-          <p>
-            Approve, decline or keep watching.
-          </p>
+            <p>
+                See the signal, context
+                and confidence clearly.
+            </p>
 
         </div>
 
 
         <div class="workflow-card">
 
-          <div class="workflow-icon">✓</div>
+            <span>♙</span>
 
-          <b>We monitor</b>
+            <b>You decide</b>
 
-          <p>
-            Track what changes after the decision.
-          </p>
+            <p>
+                Approve, decline
+                or keep watching.
+            </p>
 
         </div>
 
-      </div>
 
-    </section>
+        <div class="workflow-card">
+
+            <span>✓</span>
+
+            <b>We monitor</b>
+
+            <p>
+                Track the decision and
+                surface what changes.
+            </p>
+
+        </div>
 
 
-    <!-- CONTROL -->
+    </div>
 
-    <section
-      class="container section"
-      id="control"
-    >
+</section>
 
-      <div class="decision-grid">
+
+<!-- HUMAN CONTROL -->
+
+<section
+    class="container decision"
+    id="control">
+
+
+    <div class="decision-grid">
+
 
         <div class="decision-copy">
 
-          <div class="section-kicker">
-            HUMAN CONTROL
-          </div>
 
-          <div class="quote">
-            AI explains.<br>
-            You make the call.
-          </div>
-
-          <p class="section-copy">
-            Trade decisions should never depend on
-            a black box. Every opportunity and holding
-            review shows what the AI sees, why it matters
-            and what it could mean for your portfolio.
-          </p>
-
-
-          <div class="decision-list">
-
-            <div class="decision-item">
-              <span>✦</span>
-              <span>Clear evidence behind every opportunity</span>
+            <div class="section-kicker">
+                HUMAN CONTROL
             </div>
 
-            <div class="decision-item">
-              <span>✦</span>
-              <span>Portfolio context before an action</span>
+
+            <div class="quote">
+
+                AI explains.<br>
+                You make the call.
+
             </div>
 
-            <div class="decision-item">
-              <span>✦</span>
-              <span>Approve, decline or keep watching</span>
-            </div>
 
-            <div class="decision-item">
-              <span>✦</span>
-              <span>You remain in control of the decision</span>
-            </div>
+            <p class="section-copy">
 
-          </div>
+                Trade decisions should never depend on a
+                black box. Every opportunity and holding
+                review is designed to show what the AI sees,
+                why it matters and what it could mean for
+                your portfolio.
+
+            </p>
+
+
+            <div class="decision-list">
+
+
+                <div class="decision-item">
+
+                    <i>✦</i>
+
+                    <span>
+                        Clear evidence behind every opportunity
+                    </span>
+
+                </div>
+
+
+                <div class="decision-item">
+
+                    <i>✦</i>
+
+                    <span>
+                        Portfolio context before an action
+                    </span>
+
+                </div>
+
+
+                <div class="decision-item">
+
+                    <i>✦</i>
+
+                    <span>
+                        Approve, decline or keep watching
+                    </span>
+
+                </div>
+
+
+                <div class="decision-item">
+
+                    <i>✦</i>
+
+                    <span>
+                        You remain accountable for the decision
+                    </span>
+
+                </div>
+
+
+            </div>
 
         </div>
 
 
         <div class="decision-screen">
 
-          <img
-            src="assets/holding-detail.png"
-            alt="Holding detail and AI decision analysis"
-          >
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- MORE PRODUCT SCREENS -->
-
-    <section class="container section">
-
-      <div class="center">
-
-        <div class="section-kicker">
-          PORTFOLIO INTELLIGENCE
-        </div>
-
-        <h2 class="section-title">
-          Your portfolio.<br>
-          Seen from every angle.
-        </h2>
-
-      </div>
-
-
-      <div class="screens-grid">
-
-        <div class="screen-card">
-
-          <img
-            src="assets/portfolio-snapshot.png"
-            alt="Portfolio snapshot"
-          >
+            <img
+                src="assets/holding_detail.png"
+                alt="Holding detail showing AI assessment">
 
         </div>
 
 
-        <div class="screen-card">
+    </div>
 
-          <img
-            src="assets/markets.png"
-            alt="Market intelligence"
-          >
-
-        </div>
+</section>
 
 
-        <div class="screen-card">
+<!-- BETA -->
 
-          <img
-            src="assets/ai-insights.png"
-            alt="AI insights"
-          >
-
-        </div>
-
-      </div>
-
-    </section>
+<section class="container beta">
 
 
-    <!-- BETA CTA -->
+    <div class="beta-shell">
 
-    <section class="container section">
-
-      <div class="beta-shell">
 
         <div>
 
-          <div class="section-kicker">
-            PRIVATE BETA
-          </div>
+            <div class="section-kicker">
+                PRIVATE BETA
+            </div>
 
-          <h2>
-            See what your portfolio is missing.
-          </h2>
 
-          <p>
-            Join the early group testing Portfolio AI Copilot.
-          </p>
+            <h2>
+                See what your portfolio is missing.
+            </h2>
+
+
+            <p>
+                Join the early group testing
+                Portfolio AI Copilot.
+            </p>
 
         </div>
 
 
         <a
-          class="btn btn-primary"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header"
-          target="_blank"
-          rel="noopener"
-        >
-          Request beta access →
+            class="btn btn-primary"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header">
+
+            Request beta access →
+
         </a>
 
-      </div>
 
-    </section>
+    </div>
 
-  </main>
+</section>
 
 
-  <!-- FOOTER -->
+</main>
 
-  <footer class="container">
+
+<footer class="container">
+
 
     <div class="footer-brand">
 
-      <img
-        src="assets/logo.png"
-        alt="Portfolio AI Copilot"
-      >
+        <img
+            src="assets/logo.png"
+            alt="Portfolio AI Copilot logo">
 
-      <span>
-        © 2026 Portfolio AI Copilot
-      </span>
+        <span>
+            © 2026 Portfolio AI Copilot
+        </span>
 
     </div>
 
 
     <div class="footer-links">
 
-      <a href="#product">Product</a>
-      <a href="#intelligence">Intelligence</a>
-      <a href="#how">How it works</a>
-      <a href="#control">Control</a>
+        <a href="#product">
+            Product
+        </a>
+
+        <a href="#intelligence">
+            Intelligence
+        </a>
+
+        <a href="#how">
+            How it works
+        </a>
 
     </div>
 
-  </footer>
+
+</footer>
+
 
 </body>
 </html>
