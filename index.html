@@ -1,46 +1,64 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8">
 
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+>
 
-<meta name="description"
-content="Portfolio AI Copilot — intelligent portfolio monitoring, market context and AI-powered investment intelligence.">
+<meta
+    name="description"
+    content="Portfolio AI Copilot — intelligent portfolio monitoring, market intelligence and evidence-backed AI insights."
+>
 
 <meta name="theme-color" content="#060910">
 
-<title>Portfolio AI Copilot — Your investments, monitored by AI.</title>
+<title>
+    Portfolio AI Copilot — Your investments, monitored by AI.
+</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+>
 
 <style>
 
 /* =========================================================
-   PORTFOLIO AI COPILOT
-   COMPLETE WEBSITE REPLACEMENT
+   ROOT
 ========================================================= */
 
 :root{
+
     --bg:#060910;
+
     --surface:#0b111c;
     --surface-2:#101827;
 
     --line:rgba(255,255,255,.09);
 
     --text:#f5f7fb;
-    --soft:#d4dbe7;
-    --muted:#a7b2c4;
+    --soft:#c9d2df;
+    --muted:#97a5b8;
 
     --purple:#8d6cff;
     --blue:#5a9cff;
     --green:#48d7a0;
 
     --shadow:
-        0 30px 100px rgba(0,0,0,.48);
+        0 28px 80px rgba(0,0,0,.42);
 }
 
 *{
@@ -52,24 +70,26 @@ html{
 }
 
 body{
+
     margin:0;
 
     color:var(--text);
 
     font-family:"DM Sans",sans-serif;
 
-    line-height:1.6;
+    line-height:1.55;
 
     background:
+
         radial-gradient(
-            900px 550px at 50% -180px,
+            900px 500px at 50% -180px,
             rgba(117,89,255,.20),
             transparent 68%
         ),
 
         radial-gradient(
-            700px 500px at 100% 22%,
-            rgba(49,121,255,.09),
+            700px 420px at 100% 18%,
+            rgba(49,121,255,.10),
             transparent 72%
         ),
 
@@ -77,16 +97,19 @@ body{
 }
 
 body::before{
+
     content:"";
 
     position:fixed;
+
     inset:0;
 
     pointer-events:none;
 
-    opacity:.13;
+    opacity:.12;
 
     background-image:
+
         linear-gradient(
             rgba(255,255,255,.025) 1px,
             transparent 1px
@@ -98,7 +121,7 @@ body::before{
             transparent 1px
         );
 
-    background-size:48px 48px;
+    background-size:46px 46px;
 
     mask-image:
         linear-gradient(
@@ -119,7 +142,9 @@ img{
 }
 
 .container{
-    width:min(1220px,calc(100% - 48px));
+
+    width:min(1180px,calc(100% - 40px));
+
     margin:auto;
 }
 
@@ -129,89 +154,107 @@ img{
 ========================================================= */
 
 .nav-wrap{
+
     position:sticky;
+
     top:0;
+
     z-index:100;
 
-    background:rgba(6,9,16,.78);
+    background:rgba(6,9,16,.80);
 
     backdrop-filter:blur(18px);
 
-    border-bottom:1px solid rgba(255,255,255,.06);
+    border-bottom:
+        1px solid rgba(255,255,255,.06);
 }
 
 .nav{
-    min-height:82px;
+
+    min-height:78px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     gap:24px;
 }
 
 .brand{
+
     display:flex;
+
     align-items:center;
 
-    gap:12px;
+    gap:11px;
 
     flex-shrink:0;
 }
 
 .brand img{
-    width:42px;
-    height:42px;
+
+    width:40px;
+    height:40px;
 
     object-fit:contain;
 }
 
-.brand-copy strong{
+.brand-name{
+
     display:block;
 
     font-family:"Manrope",sans-serif;
-    font-size:17px;
-    line-height:1.2;
+
+    font-size:16px;
+
+    font-weight:800;
 
     letter-spacing:-.4px;
 }
 
-.brand-copy span{
+.brand-tag{
+
     display:block;
 
     margin-top:3px;
 
-    color:#91a0b5;
+    color:#8795a9;
 
-    font-size:10px;
+    font-size:9px;
+
     font-weight:700;
 
-    letter-spacing:1.2px;
+    letter-spacing:1px;
 }
 
 .nav-links{
+
     display:flex;
+
     align-items:center;
 
-    gap:28px;
+    gap:24px;
 
-    color:#b4bfce;
+    color:#aeb9c9;
 
-    font-size:15px;
-    font-weight:500;
+    font-size:14px;
+
+    font-weight:600;
 }
 
-.nav-links a:hover{
+.nav-links a:not(.nav-cta):hover{
     color:#fff;
 }
 
 .nav-cta{
-    padding:12px 18px;
 
-    border-radius:12px;
+    padding:11px 17px;
 
-    font-size:15px;
-    font-weight:700;
+    border-radius:11px;
+
+    color:#fff;
 
     background:
         linear-gradient(
@@ -221,99 +264,65 @@ img{
         );
 
     box-shadow:
-        0 12px 35px rgba(96,103,255,.22);
+        0 10px 30px rgba(105,100,255,.24);
 }
 
 
 /* =========================================================
-   COMMON TYPOGRAPHY
+   COMMON
 ========================================================= */
 
 .section{
-    padding:120px 0;
-}
 
-.eyebrow{
-    display:inline-flex;
-    align-items:center;
+    padding:88px 0;
 
-    gap:9px;
-
-    padding:8px 13px;
-
-    border-radius:999px;
-
-    color:#c8c0ff;
-
-    font-size:13px;
-    font-weight:700;
-
-    letter-spacing:.9px;
-
-    background:rgba(141,108,255,.10);
-
-    border:1px solid rgba(141,108,255,.28);
-}
-
-.live-dot{
-    width:8px;
-    height:8px;
-
-    border-radius:50%;
-
-    background:var(--green);
-
-    box-shadow:
-        0 0 0 4px rgba(72,215,160,.10);
+    border-top:
+        1px solid rgba(255,255,255,.055);
 }
 
 .section-kicker{
-    margin-bottom:15px;
 
-    color:#a899ff;
+    margin-bottom:12px;
+
+    color:#a999ff;
 
     font-size:13px;
+
     font-weight:800;
 
-    letter-spacing:1.4px;
+    letter-spacing:1.25px;
 }
 
-.section-title{
+h1,
+h2,
+h3{
+
     margin:0;
 
     font-family:"Manrope",sans-serif;
+}
 
-    font-size:clamp(34px,5vw,62px);
+.section-title{
 
-    line-height:1.08;
+    font-size:
+        clamp(36px,4.5vw,58px);
+
+    line-height:1.1;
 
     letter-spacing:-2px;
 }
 
 .section-copy{
-    margin:24px 0 0;
 
-    max-width:680px;
+    max-width:650px;
+
+    margin-top:18px;
 
     color:var(--soft);
 
-    font-size:19px;
+    font-size:18px;
 
     line-height:1.7;
-}
-
-.gradient{
-    background:
-        linear-gradient(
-            135deg,
-            #a58cff,
-            #67a8ff
-        );
-
-    -webkit-background-clip:text;
-    background-clip:text;
-
-    color:transparent;
 }
 
 .center{
@@ -321,8 +330,27 @@ img{
 }
 
 .center .section-copy{
+
     margin-left:auto;
+
     margin-right:auto;
+}
+
+.gradient{
+
+    background:
+        linear-gradient(
+            100deg,
+            #c0adff,
+            #8d75ff,
+            #6fa9ff
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
 }
 
 
@@ -331,38 +359,47 @@ img{
 ========================================================= */
 
 .btn-row{
+
     display:flex;
+
     flex-wrap:wrap;
 
-    gap:14px;
+    gap:12px;
 
-    margin-top:30px;
+    margin-top:26px;
 }
 
 .btn{
+
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
 
-    min-height:52px;
+    min-height:50px;
 
-    padding:0 22px;
+    padding:0 20px;
 
-    border-radius:13px;
+    border-radius:12px;
 
-    font-size:16px;
-    font-weight:700;
+    font-size:15px;
 
-    transition:
-        transform .2s ease,
-        border-color .2s ease;
+    font-weight:800;
+
+    transition:.2s ease;
 }
 
 .btn:hover{
-    transform:translateY(-2px);
+
+    transform:
+        translateY(-2px);
 }
 
 .btn-primary{
+
+    color:#fff;
+
     background:
         linear-gradient(
             135deg,
@@ -371,15 +408,18 @@ img{
         );
 
     box-shadow:
-        0 16px 40px rgba(91,102,255,.25);
+        0 14px 35px rgba(100,100,255,.25);
 }
 
 .btn-secondary{
-    color:#e9eef8;
 
-    border:1px solid rgba(255,255,255,.14);
+    color:#dce4ef;
 
-    background:rgba(255,255,255,.035);
+    border:
+        1px solid rgba(255,255,255,.14);
+
+    background:
+        rgba(255,255,255,.035);
 }
 
 
@@ -388,109 +428,158 @@ img{
 ========================================================= */
 
 .hero{
-    min-height:820px;
 
     display:grid;
 
     grid-template-columns:
-        minmax(0,1fr)
-        minmax(360px,.78fr);
+        .92fr 1.08fr;
 
     align-items:center;
 
-    gap:60px;
+    gap:58px;
 
-    padding:70px 0 90px;
+    padding:72px 0 68px;
+}
+
+.eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 12px;
+
+    border-radius:999px;
+
+    border:
+        1px solid rgba(141,108,255,.35);
+
+    color:#c7beff;
+
+    background:
+        rgba(141,108,255,.08);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:1.2px;
+}
+
+.dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:
+        0 0 12px rgba(72,215,160,.65);
 }
 
 .hero h1{
-    margin:20px 0 0;
 
-    font-family:"Manrope",sans-serif;
+    margin-top:20px;
 
-    font-size:clamp(48px,6vw,82px);
+    font-size:
+        clamp(52px,6vw,78px);
 
     line-height:1.02;
 
-    letter-spacing:-3px;
+    letter-spacing:-3.5px;
 }
 
 .hero-copy{
-    margin:24px 0 0;
 
-    max-width:620px;
+    max-width:590px;
+
+    margin-top:20px;
 
     color:var(--soft);
 
-    font-size:21px;
+    font-size:19px;
 
-    line-height:1.65;
+    line-height:1.7;
 }
 
-.hero-note{
-    margin-top:22px;
+.micro{
 
-    color:#b8c2d1;
+    margin-top:15px;
 
-    font-size:15px;
+    color:#8f9caf;
+
+    font-size:14px;
 }
 
-.hero-screen-wrap{
+.hero-visual{
+
     position:relative;
 
     display:flex;
+
+    align-items:center;
+
     justify-content:center;
+
+    min-height:590px;
 }
 
 .hero-glow{
+
     position:absolute;
 
-    width:520px;
-    height:520px;
+    width:560px;
+    height:560px;
 
     border-radius:50%;
 
     background:
         radial-gradient(
             circle,
-            rgba(110,94,255,.24),
-            transparent 68%
+            rgba(117,101,255,.22),
+            rgba(91,137,255,.06) 42%,
+            transparent 70%
         );
 
-    filter:blur(20px);
-
-    pointer-events:none;
+    filter:blur(10px);
 }
 
-.app-screen{
+.screen{
+
     position:relative;
+
+    z-index:2;
 
     overflow:hidden;
 
-    border-radius:30px;
+    border-radius:28px;
 
     background:#090d15;
 
-    border:1px solid rgba(255,255,255,.11);
+    border:
+        1px solid rgba(255,255,255,.10);
 
-    box-shadow:var(--shadow);
+    box-shadow:
+        var(--shadow);
 }
 
-.app-screen img{
+.screen img{
+
     width:100%;
+
     height:auto;
 }
 
-/*
-    IMPORTANT:
-    Screens are intentionally shown large.
-    They are not tiny decorative mockups.
-*/
-
 .hero-screen{
+
     width:min(100%,430px);
 
-    border-radius:34px;
+    border-radius:32px;
 }
 
 
@@ -499,104 +588,150 @@ img{
 ========================================================= */
 
 .trust-row{
-    display:grid;
 
-    grid-template-columns:
-        repeat(4,1fr);
+    display:flex;
 
-    gap:20px;
+    align-items:center;
 
-    padding:26px 30px;
+    justify-content:center;
 
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
+    flex-wrap:wrap;
 
-    color:#c8d0dc;
+    gap:18px;
 
-    font-size:16px;
-    font-weight:600;
+    padding:22px 10px;
 
-    text-align:center;
+    border-top:
+        1px solid var(--line);
+
+    border-bottom:
+        1px solid var(--line);
+
+    color:#c7d0dd;
+
+    font-size:15px;
+}
+
+.trust-divider{
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:#6856bc;
 }
 
 
 /* =========================================================
-   PRODUCT SHOWCASE
+   BUILT AROUND PORTFOLIO
 ========================================================= */
 
 .product-grid{
+
     display:grid;
 
     grid-template-columns:
-        minmax(280px,.8fr)
-        minmax(420px,1.2fr);
+        1fr 1.05fr;
 
     align-items:center;
 
-    gap:90px;
+    gap:60px;
 
-    margin-top:70px;
+    margin-top:50px;
+}
+
+.product-points{
+
+    display:grid;
+
+    gap:14px;
+
+    margin-top:28px;
+}
+
+.product-point{
+
+    display:grid;
+
+    grid-template-columns:
+        42px 1fr;
+
+    gap:13px;
+
+    align-items:start;
+
+    padding:17px;
+
+    border-radius:15px;
+
+    border:
+        1px solid var(--line);
+
+    background:
+        rgba(255,255,255,.025);
+}
+
+.point-number{
+
+    width:38px;
+    height:38px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:11px;
+
+    color:#bcaeff;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    background:
+        rgba(141,108,255,.13);
+}
+
+.product-point strong{
+
+    display:block;
+
+    margin-bottom:4px;
+
+    font-size:16px;
+}
+
+.product-point span{
+
+    color:var(--muted);
+
+    font-size:15px;
 }
 
 .product-screen{
-    width:min(100%,480px);
+
+    width:min(100%,450px);
 
     justify-self:center;
 }
 
-.feature-list{
-    display:grid;
-
-    gap:18px;
-
-    margin-top:32px;
-}
-
-.feature-item{
-    padding:20px 22px;
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.035);
-
-    border:1px solid var(--line);
-}
-
-.feature-item strong{
-    display:block;
-
-    margin-bottom:5px;
-
-    font-size:18px;
-}
-
-.feature-item span{
-    color:var(--muted);
-
-    font-size:16px;
-}
-
 
 /* =========================================================
-   SCREEN PAIRS
+   TWO SCREEN PRODUCT STORY
 ========================================================= */
 
-.screen-section{
-    padding:120px 0;
-
-    border-top:1px solid rgba(255,255,255,.06);
-}
-
 .split{
+
     display:grid;
 
     grid-template-columns:
-        minmax(0,1fr)
-        minmax(0,1fr);
+        1fr 1fr;
 
     align-items:center;
 
-    gap:80px;
+    gap:70px;
 }
 
 .split.reverse .copy{
@@ -607,229 +742,497 @@ img{
     order:1;
 }
 
-.screen-single{
-    width:min(100%,470px);
-
-    margin:auto;
-}
-
 .screen-pair{
+
     display:flex;
 
-    align-items:flex-start;
     justify-content:center;
 
-    gap:24px;
+    align-items:flex-start;
+
+    gap:20px;
 }
 
-.screen-pair .app-screen{
-    width:46%;
+.screen-pair .screen{
+
+    width:48%;
 }
 
-.screen-pair .app-screen:nth-child(2){
-    margin-top:54px;
+.screen-pair .screen:nth-child(2){
+
+    margin-top:42px;
 }
 
 
 /* =========================================================
-   AI INTELLIGENCE
+   AI OPPORTUNITY
 ========================================================= */
 
-.intelligence-shell{
-    margin-top:65px;
+.opportunity-wrap{
 
-    padding:50px;
-
-    border-radius:32px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(141,108,255,.10),
-            rgba(90,156,255,.045)
-        );
-
-    border:1px solid rgba(141,108,255,.20);
-}
-
-.intelligence-grid{
     display:grid;
 
     grid-template-columns:
-        repeat(2,1fr);
+        .88fr 1.12fr;
 
-    gap:18px;
+    align-items:center;
 
-    margin-top:35px;
+    gap:60px;
+
+    margin-top:45px;
 }
 
-.intel-card{
-    padding:22px;
+.point-list{
 
-    border-radius:18px;
+    display:grid;
 
-    background:rgba(7,11,19,.48);
+    gap:16px;
 
-    border:1px solid rgba(255,255,255,.08);
+    margin-top:26px;
 }
 
-.intel-card h3{
-    margin:0 0 8px;
+.point{
 
-    font-size:18px;
+    display:grid;
+
+    grid-template-columns:
+        40px 1fr;
+
+    gap:13px;
 }
 
-.intel-card p{
-    margin:0;
+.point-num{
 
-    color:var(--muted);
+    width:38px;
+    height:38px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:10px;
+
+    color:#b8a9ff;
+
+    background:#151f31;
+
+    border:
+        1px solid #2d3b51;
+
+    font-size:13px;
+
+    font-weight:800;
+}
+
+.point h3{
+
+    margin:0 0 4px;
 
     font-size:16px;
 }
 
+.point p{
+
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:15px;
+
+    line-height:1.65;
+}
+
+.opportunity-stack{
+
+    position:relative;
+
+    min-height:650px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.opportunity-main{
+
+    width:min(100%,400px);
+}
+
+.opportunity-back{
+
+    position:absolute;
+
+    width:250px;
+
+    opacity:.55;
+
+    filter:brightness(.8);
+
+    z-index:1;
+}
+
+.opportunity-back.left{
+
+    left:0;
+
+    transform:
+        rotate(-5deg);
+}
+
+.opportunity-back.right{
+
+    right:0;
+
+    transform:
+        rotate(5deg);
+}
+
 
 /* =========================================================
-   SCREEN GALLERY
+   INTELLIGENCE
 ========================================================= */
 
-.gallery{
+.intel-shell{
+
+    margin-top:42px;
+
+    padding:34px;
+
+    border-radius:25px;
+
+    border:
+        1px solid var(--line);
+
+    background:
+        linear-gradient(
+            150deg,
+            #101827,
+            #09111c
+        );
+}
+
+.intel-top{
+
     display:grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        1fr .9fr;
 
-    gap:28px;
+    gap:45px;
 
-    margin-top:65px;
+    align-items:end;
 }
 
-.gallery .app-screen{
-    border-radius:26px;
+.layer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:13px;
+
+    margin-top:30px;
 }
 
-.gallery-label{
-    margin-top:15px;
+.layer{
 
-    color:#dbe2ed;
+    min-height:145px;
 
-    font-size:17px;
-    font-weight:700;
+    padding:17px;
+
+    border-radius:14px;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    background:
+        rgba(255,255,255,.025);
+}
+
+.layer-icon{
+
+    width:36px;
+    height:36px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:10px;
+
+    color:#bcaeff;
+
+    background:
+        rgba(141,108,255,.15);
+
+    font-weight:800;
+}
+
+.layer h3{
+
+    margin:13px 0 6px;
+
+    font-size:15px;
+}
+
+.layer p{
+
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.55;
+}
+
+
+/* =========================================================
+   MARKETS
+========================================================= */
+
+.market-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr .9fr;
+
+    align-items:center;
+
+    gap:70px;
+
+    margin-top:45px;
+}
+
+.market-cards{
+
+    display:grid;
+
+    gap:13px;
+
+    margin-top:26px;
+}
+
+.market-card{
+
+    display:grid;
+
+    grid-template-columns:
+        42px 1fr;
+
+    gap:14px;
+
+    padding:16px 18px;
+
+    border-radius:15px;
+
+    border:
+        1px solid var(--line);
+
+    background:
+        rgba(255,255,255,.025);
+}
+
+.market-card > span{
+
+    color:#b6a8ff;
+
+    font-weight:800;
+}
+
+.market-card h3{
+
+    margin:0 0 4px;
+
+    font-size:16px;
+}
+
+.market-card p{
+
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:15px;
+}
+
+.markets-screen{
+
+    width:min(100%,430px);
+
+    justify-self:center;
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.journey{
 
     text-align:center;
 }
 
+.journey-stage{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:16px;
+
+    margin-top:42px;
+
+    overflow:hidden;
+
+    padding:20px 0;
+}
+
+.journey-phone{
+
+    width:18%;
+
+    max-width:210px;
+
+    border-radius:22px;
+
+    opacity:.75;
+
+    transition:.2s ease;
+}
+
+.journey-phone:nth-child(3){
+
+    width:22%;
+
+    max-width:250px;
+
+    opacity:1;
+
+    transform:
+        translateY(-14px);
+
+    box-shadow:
+        0 24px 70px rgba(0,0,0,.55);
+}
+
 
 /* =========================================================
-   CONTROL SECTION
+   CONTROL / PROFILE
 ========================================================= */
 
-.control-shell{
+.profile-grid{
+
     display:grid;
 
     grid-template-columns:
-        minmax(0,1fr)
-        minmax(320px,.85fr);
+        .82fr 1.18fr;
 
     align-items:center;
 
-    gap:80px;
-
-    padding:70px;
-
-    border-radius:36px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(141,108,255,.11),
-            rgba(90,156,255,.06)
-        );
-
-    border:1px solid rgba(255,255,255,.09);
+    gap:70px;
 }
 
-.quote{
-    margin:0;
+.profile-screen{
 
-    font-family:"Manrope",sans-serif;
+    width:min(100%,400px);
 
-    font-size:clamp(38px,5vw,64px);
+    justify-self:center;
+}
+
+.profile-points{
+
+    display:grid;
+
+    gap:13px;
+
+    margin-top:26px;
+}
+
+.profile-point{
+
+    padding:16px 18px;
+
+    border-left:
+        3px solid var(--purple);
+
+    background:
+        rgba(255,255,255,.025);
+}
+
+.profile-point b{
+
+    display:block;
+
+    margin-bottom:4px;
+
+    font-size:16px;
+}
+
+.profile-point span{
+
+    color:var(--muted);
+
+    font-size:15px;
+}
+
+
+/* =========================================================
+   BETA
+========================================================= */
+
+.beta{
+
+    padding:80px 0;
+}
+
+.beta-shell{
+
+    padding:65px 40px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    border:
+        1px solid rgba(255,255,255,.10);
+
+    background:
+
+        radial-gradient(
+            500px 260px at 50% 0,
+            rgba(133,104,255,.19),
+            transparent 72%
+        ),
+
+        #0b111c;
+}
+
+.beta-shell h2{
+
+    font-size:
+        clamp(38px,5vw,62px);
 
     line-height:1.1;
 
     letter-spacing:-2px;
 }
 
-.control-list{
-    display:grid;
-
-    gap:14px;
-
-    margin-top:30px;
-}
-
-.control-item{
-    display:flex;
-    align-items:flex-start;
-
-    gap:12px;
-
-    color:var(--soft);
-
-    font-size:17px;
-}
-
-.control-item b{
-    color:#a58cff;
-}
-
-
-/* =========================================================
-   BETA CTA
-========================================================= */
-
-.beta{
-    padding:120px 0;
-}
-
-.beta-shell{
-    padding:80px 40px;
-
-    text-align:center;
-
-    border-radius:36px;
-
-    background:
-        radial-gradient(
-            500px 300px at 50% 0%,
-            rgba(132,105,255,.20),
-            transparent 70%
-        ),
-        #0b111c;
-
-    border:1px solid rgba(255,255,255,.10);
-}
-
-.beta-shell h2{
-    margin:0;
-
-    font-family:"Manrope",sans-serif;
-
-    font-size:clamp(40px,5vw,66px);
-
-    line-height:1.08;
-
-    letter-spacing:-2px;
-}
-
 .beta-shell p{
-    margin:20px auto 0;
 
-    max-width:650px;
+    max-width:620px;
+
+    margin:18px auto 25px;
 
     color:var(--soft);
 
-    font-size:19px;
+    font-size:18px;
 }
 
 
@@ -838,22 +1241,30 @@ img{
 ========================================================= */
 
 footer{
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
-    gap:24px;
+    flex-wrap:wrap;
 
-    padding:35px 0 45px;
+    gap:25px;
 
-    border-top:1px solid rgba(255,255,255,.07);
+    padding:32px 0 42px;
+
+    border-top:
+        1px solid rgba(255,255,255,.07);
 }
 
 .footer-brand{
+
     display:flex;
+
     align-items:center;
 
-    gap:12px;
+    gap:10px;
 
     color:#9eabbc;
 
@@ -861,6 +1272,7 @@ footer{
 }
 
 .footer-brand img{
+
     width:32px;
     height:32px;
 
@@ -868,14 +1280,20 @@ footer{
 }
 
 .footer-links{
+
     display:flex;
+
     flex-wrap:wrap;
 
-    gap:22px;
+    gap:20px;
 
     color:#aab5c5;
 
-    font-size:15px;
+    font-size:14px;
+}
+
+.footer-links a:hover{
+    color:#fff;
 }
 
 
@@ -883,24 +1301,25 @@ footer{
    RESPONSIVE
 ========================================================= */
 
-@media(max-width:1000px){
+@media(max-width:950px){
 
-    .nav-links{
+    .nav-links a:not(.nav-cta){
         display:none;
     }
 
     .hero{
+
         grid-template-columns:1fr;
 
         text-align:center;
 
-        min-height:auto;
-
-        padding-top:70px;
+        padding-top:58px;
     }
 
     .hero-copy{
+
         margin-left:auto;
+
         margin-right:auto;
     }
 
@@ -908,21 +1327,23 @@ footer{
         justify-content:center;
     }
 
-    .hero-screen{
-        width:min(100%,440px);
+    .micro{
+        text-align:center;
     }
 
-    .trust-row{
-        grid-template-columns:
-            repeat(2,1fr);
+    .hero-visual{
+        min-height:540px;
     }
 
     .product-grid,
     .split,
-    .control-shell{
+    .opportunity-wrap,
+    .market-grid,
+    .profile-grid{
+
         grid-template-columns:1fr;
 
-        gap:50px;
+        gap:45px;
     }
 
     .split.reverse .copy,
@@ -935,162 +1356,160 @@ footer{
     }
 
     .copy .section-copy{
+
         margin-left:auto;
+
         margin-right:auto;
     }
 
-    .product-grid .feature-list{
-        max-width:650px;
+    .intel-top{
 
-        margin-left:auto;
-        margin-right:auto;
+        grid-template-columns:1fr;
     }
 
-    .control-shell{
-        padding:50px 30px;
+    .layer-grid{
 
-        text-align:center;
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    .control-list{
-        max-width:620px;
+    .opportunity-stack{
 
-        margin-left:auto;
-        margin-right:auto;
-
-        text-align:left;
+        min-height:580px;
     }
 }
 
 
-@media(max-width:700px){
+@media(max-width:650px){
 
     .container{
-        width:min(100% - 28px,1220px);
+
+        width:
+            min(100% - 28px,1180px);
     }
 
-    .nav{
-        min-height:72px;
+    .brand-name{
+        font-size:14px;
     }
 
-    .brand img{
-        width:36px;
-        height:36px;
-    }
-
-    .brand-copy strong{
-        font-size:15px;
-    }
-
-    .brand-copy span{
+    .brand-tag{
         font-size:8px;
     }
 
     .nav-cta{
+
         padding:10px 13px;
 
         font-size:13px;
     }
 
     .hero{
-        padding:55px 0 70px;
+
+        padding:48px 0 55px;
     }
 
     .hero h1{
+
         font-size:50px;
 
-        letter-spacing:-2px;
+        letter-spacing:-2.5px;
     }
 
     .hero-copy{
-        font-size:18px;
+
+        font-size:17px;
+    }
+
+    .hero-visual{
+
+        min-height:480px;
+    }
+
+    .hero-screen{
+        width:360px;
     }
 
     .section{
-        padding:85px 0;
-    }
 
-    .screen-section{
-        padding:85px 0;
+        padding:68px 0;
     }
 
     .section-title{
-        font-size:40px;
+
+        font-size:38px;
 
         letter-spacing:-1.5px;
     }
 
     .section-copy{
+
         font-size:17px;
     }
 
     .trust-row{
-        grid-template-columns:1fr;
 
-        gap:13px;
+        gap:10px;
 
-        font-size:15px;
+        font-size:14px;
+
+        text-align:center;
     }
 
-    .product-grid{
-        margin-top:45px;
+    .trust-divider{
+        display:none;
     }
 
     .screen-pair{
-        gap:14px;
+
+        gap:12px;
     }
 
-    .screen-pair .app-screen:nth-child(2){
-        margin-top:32px;
+    .screen-pair .screen:nth-child(2){
+
+        margin-top:26px;
     }
 
-    .intelligence-shell{
-        margin-top:45px;
+    .opportunity-back{
 
-        padding:28px 18px;
-
-        border-radius:24px;
+        width:180px;
     }
 
-    .intelligence-grid{
+    .layer-grid{
+
         grid-template-columns:1fr;
     }
 
-    .gallery{
-        grid-template-columns:1fr;
+    .layer{
 
-        gap:38px;
-
-        margin-top:45px;
+        min-height:auto;
     }
 
-    .gallery .app-screen{
-        width:min(100%,430px);
+    .journey-stage{
 
-        margin:auto;
+        gap:8px;
+
+        margin-left:-10px;
+
+        margin-right:-10px;
     }
 
-    .gallery-label{
-        font-size:18px;
-    }
+    .journey-phone{
 
-    .control-shell{
-        padding:42px 20px;
-
-        border-radius:26px;
+        min-width:90px;
     }
 
     .beta{
-        padding:85px 0;
+
+        padding:68px 0;
     }
 
     .beta-shell{
-        padding:55px 20px;
 
-        border-radius:26px;
+        padding:50px 20px;
     }
 
     footer{
+
         flex-direction:column;
 
         align-items:flex-start;
@@ -1098,7 +1517,9 @@ footer{
 }
 
 </style>
+
 </head>
+
 
 <body>
 
@@ -1109,40 +1530,43 @@ footer{
 
 <div class="nav-wrap">
 
-    <nav class="container nav">
+<header class="container nav">
 
-        <a class="brand" href="#top">
+    <a class="brand" href="#top">
 
-            <img
-                src="assets/logo.png"
-                alt="Portfolio AI Copilot logo"
-            >
+        <img
+            src="assets/logo.png"
+            alt="Portfolio AI Copilot"
+        >
 
-            <span class="brand-copy">
+        <span>
 
-                <strong>Portfolio AI Copilot</strong>
-
-                <span>AI PORTFOLIO INTELLIGENCE</span>
-
+            <span class="brand-name">
+                Portfolio AI Copilot
             </span>
 
+            <span class="brand-tag">
+                AI CO-PILOT · YOU STAY IN CONTROL
+            </span>
+
+        </span>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+        <a href="#portfolio">Product</a>
+
+        <a href="#intelligence">Intelligence</a>
+
+        <a href="#how">How it works</a>
+
+        <a href="#control">Control</a>
+
+        <a href="privacy.html">
+            Privacy Policy
         </a>
-
-
-        <div class="nav-links">
-
-            <a href="#portfolio">Portfolio</a>
-
-            <a href="#intelligence">AI Intelligence</a>
-
-            <a href="#markets">Markets</a>
-
-            <a href="#screens">Screens</a>
-
-            <a href="#control">Control</a>
-
-        </div>
-
 
         <a
             class="nav-cta"
@@ -1152,6 +1576,8 @@ footer{
         </a>
 
     </nav>
+
+</header>
 
 </div>
 
@@ -1163,13 +1589,16 @@ footer{
      HERO
 ===================================================== -->
 
-<section class="container hero">
+<section
+    class="container hero"
+    id="portfolio"
+>
 
     <div>
 
         <div class="eyebrow">
 
-            <span class="live-dot"></span>
+            <span class="dot"></span>
 
             PRIVATE BETA
 
@@ -1180,12 +1609,24 @@ footer{
 
             Portfolio AI Copilot
 
+            <br>
+
+            <span class="gradient">
+
+                Your investments,
+                monitored by AI.
+
+            </span>
+
         </h1>
 
 
         <p class="hero-copy">
 
-            Your investments, monitored by AI.
+            Portfolio AI Copilot brings your portfolio,
+            market intelligence and AI-powered insights
+            into one connected view — helping you understand
+            what deserves your attention and why.
 
         </p>
 
@@ -1202,28 +1643,28 @@ footer{
 
             <a
                 class="btn btn-secondary"
-                href="#portfolio"
+                href="#how"
             >
-                Explore the product
+                See how it works
             </a>
 
         </div>
 
 
-        <div class="hero-note">
+        <div class="micro">
 
-            Portfolio intelligence, market context and AI-powered insights — with you in control.
+            AI provides intelligence. You remain in control of your investment decisions.
 
         </div>
 
     </div>
 
 
-    <div class="hero-screen-wrap">
+    <div class="hero-visual">
 
         <div class="hero-glow"></div>
 
-        <div class="app-screen hero-screen">
+        <div class="screen hero-screen">
 
             <img
                 src="assets/portfolio.png"
@@ -1238,52 +1679,68 @@ footer{
 
 
 <!-- =====================================================
-     VALUE STRIP
+     TRUST ROW
 ===================================================== -->
 
 <div class="container trust-row">
 
-    <div>Portfolio-aware intelligence</div>
+    <strong>
+        Portfolio-aware intelligence
+    </strong>
 
-    <div>Market context in one place</div>
+    <span class="trust-divider"></span>
 
-    <div>Evidence-backed AI insights</div>
+    <strong>
+        Evidence-backed insights
+    </strong>
 
-    <div>You stay in control</div>
+    <span class="trust-divider"></span>
+
+    <strong>
+        Market context in one place
+    </strong>
+
+    <span class="trust-divider"></span>
+
+    <strong>
+        You stay in control
+    </strong>
 
 </div>
 
 
 <!-- =====================================================
-     PORTFOLIO
+     BUILT AROUND YOUR PORTFOLIO
 ===================================================== -->
 
-<section
-    class="container section"
-    id="portfolio"
->
+<section class="container section">
 
     <div class="center">
 
         <div class="section-kicker">
 
-            YOUR PORTFOLIO, UNDERSTOOD
+            BUILT AROUND YOUR PORTFOLIO
 
         </div>
 
         <h2 class="section-title">
 
-            See the whole picture.<br>
+            See what you own.
+
+            <br>
 
             <span class="gradient">
-                Not just the numbers.
+
+                Understand what matters.
+
             </span>
 
         </h2>
 
         <p class="section-copy">
 
-            Monitor your portfolio, understand its health and see what may deserve your attention — all from one connected view.
+            Start with your portfolio, then move naturally into the holdings,
+            signals and insights that help you understand the bigger picture.
 
         </p>
 
@@ -1292,39 +1749,72 @@ footer{
 
     <div class="product-grid">
 
-        <div class="copy">
+        <div>
 
-            <div class="feature-list">
+            <div class="product-points">
 
-                <div class="feature-item">
+                <div class="product-point">
 
-                    <strong>Portfolio at a glance</strong>
+                    <div class="point-number">
+                        01
+                    </div>
 
-                    <span>
-                        See value, returns, deployment and holdings in one clear view.
-                    </span>
+                    <div>
+
+                        <strong>
+                            One clear portfolio view
+                        </strong>
+
+                        <span>
+                            See your portfolio value, positions,
+                            returns and allocation in one place.
+                        </span>
+
+                    </div>
 
                 </div>
 
 
-                <div class="feature-item">
+                <div class="product-point">
 
-                    <strong>Portfolio health</strong>
+                    <div class="point-number">
+                        02
+                    </div>
 
-                    <span>
-                        Understand areas that are working, weakening or worth monitoring.
-                    </span>
+                    <div>
+
+                        <strong>
+                            Understand portfolio health
+                        </strong>
+
+                        <span>
+                            Surface signals and portfolio context
+                            that may deserve a closer look.
+                        </span>
+
+                    </div>
 
                 </div>
 
 
-                <div class="feature-item">
+                <div class="product-point">
 
-                    <strong>Connected intelligence</strong>
+                    <div class="point-number">
+                        03
+                    </div>
 
-                    <span>
-                        Move from your portfolio into AI insights without losing context.
-                    </span>
+                    <div>
+
+                        <strong>
+                            Move from overview to detail
+                        </strong>
+
+                        <span>
+                            Drill into holdings and intelligence
+                            without losing the context around them.
+                        </span>
+
+                    </div>
 
                 </div>
 
@@ -1333,11 +1823,11 @@ footer{
         </div>
 
 
-        <div class="app-screen product-screen">
+        <div class="screen product-screen">
 
             <img
-                src="assets/portfolio.png"
-                alt="Portfolio overview"
+                src="assets/portfolio_snapshot.png"
+                alt="Portfolio snapshot"
             >
 
         </div>
@@ -1348,10 +1838,10 @@ footer{
 
 
 <!-- =====================================================
-     PORTFOLIO SNAPSHOT
+     HOLDINGS
 ===================================================== -->
 
-<section class="screen-section">
+<section class="section">
 
     <div class="container split">
 
@@ -1359,21 +1849,21 @@ footer{
 
             <div class="screen-pair">
 
-                <div class="app-screen">
+                <div class="screen">
 
                     <img
-                        src="assets/portfolio_snapshot.png"
-                        alt="Portfolio snapshot"
+                        src="assets/holdings.png"
+                        alt="Portfolio holdings"
                     >
 
                 </div>
 
 
-                <div class="app-screen">
+                <div class="screen">
 
                     <img
-                        src="assets/holdings.png"
-                        alt="Portfolio holdings"
+                        src="assets/holding_detail.png"
+                        alt="Holding detail"
                     >
 
                 </div>
@@ -1387,23 +1877,26 @@ footer{
 
             <div class="section-kicker">
 
-                YOUR MONEY, CLEARLY ORGANISED
+                FROM PORTFOLIO TO POSITION
 
             </div>
 
-
             <h2 class="section-title">
 
-                From overview<br>
+                Every holding
 
-                to every holding.
+                <br>
+
+                has a story.
 
             </h2>
 
-
             <p class="section-copy">
 
-                Start with the big picture, then move into individual holdings when you need more detail. Important information stays connected instead of scattered across multiple tools.
+                Move beyond a simple profit and loss number.
+                Review each holding with portfolio context,
+                market behaviour and the information behind
+                the AI assessment.
 
             </p>
 
@@ -1418,7 +1911,7 @@ footer{
      AI PORTFOLIO INSIGHTS
 ===================================================== -->
 
-<section class="screen-section">
+<section class="section">
 
     <div class="container split reverse">
 
@@ -1430,21 +1923,25 @@ footer{
 
             </div>
 
-
             <h2 class="section-title">
 
-                Understand what<br>
+                Know what may
+
+                <br>
 
                 <span class="gradient">
-                    deserves attention.
+
+                    deserve your attention.
+
                 </span>
 
             </h2>
 
-
             <p class="section-copy">
 
-                Portfolio-level intelligence brings together holdings, portfolio context and relevant evidence to highlight areas that may need a closer look.
+                Portfolio AI Copilot brings together your holdings,
+                portfolio context and relevant signals to help surface
+                areas that may deserve a closer look.
 
             </p>
 
@@ -1453,7 +1950,13 @@ footer{
 
         <div class="visual">
 
-            <div class="app-screen screen-single">
+            <div
+                class="screen"
+                style="
+                    width:min(100%,430px);
+                    margin:auto;
+                "
+            >
 
                 <img
                     src="assets/ai_portfolio_insights.png"
@@ -1461,59 +1964,6 @@ footer{
                 >
 
             </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     HOLDING DETAIL
-===================================================== -->
-
-<section class="screen-section">
-
-    <div class="container split">
-
-        <div class="visual">
-
-            <div class="app-screen screen-single">
-
-                <img
-                    src="assets/holding_detail.png"
-                    alt="Holding detail and AI assessment"
-                >
-
-            </div>
-
-        </div>
-
-
-        <div class="copy">
-
-            <div class="section-kicker">
-
-                HOLDING INTELLIGENCE
-
-            </div>
-
-
-            <h2 class="section-title">
-
-                See the evidence<br>
-
-                before the decision.
-
-            </h2>
-
-
-            <p class="section-copy">
-
-                Review the current position, AI assessment and supporting evidence together. The goal is not to hide the reasoning behind a score, but to give you context before you act.
-
-            </p>
 
         </div>
 
@@ -1527,59 +1977,111 @@ footer{
 ===================================================== -->
 
 <section
-    class="screen-section"
+    class="container section"
     id="intelligence"
 >
 
-    <div class="container split reverse">
+    <div class="center">
 
-        <div class="copy">
+        <div class="section-kicker">
 
-            <div class="section-kicker">
+            AI OPPORTUNITY INTELLIGENCE
 
-                AI OPPORTUNITY RADAR
+        </div>
 
-            </div>
+        <h2 class="section-title">
+
+            Opportunities are easier to review
+
+            <br>
+
+            <span class="gradient">
+
+                when the evidence is visible.
+
+            </span>
+
+        </h2>
+
+        <p class="section-copy">
+
+            Explore AI-powered opportunities with supporting context,
+            confidence and relevant evidence instead of relying
+            on a single unexplained signal.
+
+        </p>
+
+    </div>
 
 
-            <h2 class="section-title">
+    <div class="opportunity-wrap">
 
-                Find what may<br>
+        <div class="opportunity-copy">
 
-                <span class="gradient">
-                    deserve attention.
-                </span>
+            <div class="point-list">
 
-            </h2>
+                <div class="point">
 
+                    <div class="point-num">
+                        01
+                    </div>
 
-            <p class="section-copy">
+                    <div>
 
-                AI opportunities are presented with context, confidence and supporting intelligence so you can review the case rather than blindly follow a signal.
+                        <h3>
+                            Discover
+                        </h3>
 
-            </p>
+                        <p>
+                            Surface potential opportunities from
+                            the market and your selected universe.
+                        </p>
 
-
-            <div class="feature-list">
-
-                <div class="feature-item">
-
-                    <strong>Discover opportunities</strong>
-
-                    <span>
-                        Explore potential opportunities surfaced from market intelligence.
-                    </span>
+                    </div>
 
                 </div>
 
 
-                <div class="feature-item">
+                <div class="point">
 
-                    <strong>Review the evidence</strong>
+                    <div class="point-num">
+                        02
+                    </div>
 
-                    <span>
-                        See the information behind the opportunity before deciding what to do.
-                    </span>
+                    <div>
+
+                        <h3>
+                            Understand
+                        </h3>
+
+                        <p>
+                            Review the AI assessment,
+                            confidence and evidence behind it.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="point">
+
+                    <div class="point-num">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Decide
+                        </h3>
+
+                        <p>
+                            Use the intelligence as decision support.
+                            You remain responsible for the action you take.
+                        </p>
+
+                    </div>
 
                 </div>
 
@@ -1588,30 +2090,29 @@ footer{
         </div>
 
 
-        <div class="visual">
+        <div class="opportunity-stack">
 
-            <div class="screen-pair">
+            <img
+                class="screen opportunity-back left"
+                src="assets/ai_insights.png"
+                alt=""
+            >
 
-                <div class="app-screen">
+            <div class="screen opportunity-main">
 
-                    <img
-                        src="assets/ai_insights.png"
-                        alt="AI Insights opportunity radar"
-                    >
-
-                </div>
-
-
-                <div class="app-screen">
-
-                    <img
-                        src="assets/ai_opportunity.png"
-                        alt="AI Opportunity analysis"
-                    >
-
-                </div>
+                <img
+                    src="assets/ai_opportunity.png"
+                    alt="AI Opportunity analysis"
+                >
 
             </div>
+
+
+            <img
+                class="screen opportunity-back right"
+                src="assets/home.png"
+                alt=""
+            >
 
         </div>
 
@@ -1621,130 +2122,165 @@ footer{
 
 
 <!-- =====================================================
-     8 LAYER INTELLIGENCE
+     8 LAYERS
 ===================================================== -->
 
-<section class="container section">
+<section
+    class="container section"
+    id="intelligence-layers"
+>
 
-    <div class="center">
+    <div class="intel-shell">
 
-        <div class="section-kicker">
+        <div class="intel-top">
 
-            MULTIPLE PERSPECTIVES
+            <div>
+
+                <div class="section-kicker">
+
+                    8 LAYERS OF INTELLIGENCE
+
+                </div>
+
+                <h2 class="section-title">
+
+                    One clear view.
+
+                    <br>
+
+                    <span class="gradient">
+
+                        All the evidence.
+
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <p class="section-copy">
+
+                Multiple perspectives help create a more complete
+                picture before an insight or opportunity is presented.
+
+            </p>
 
         </div>
 
 
-        <h2 class="section-title">
+        <div class="layer-grid">
 
-            More evidence.<br>
+            <div class="layer">
 
-            <span class="gradient">
-                Less noise.
-            </span>
+                <div class="layer-icon">↗</div>
 
-        </h2>
-
-
-        <p class="section-copy">
-
-            Portfolio AI Copilot brings multiple sources of intelligence together to create a more complete picture before presenting an insight or opportunity.
-
-        </p>
-
-    </div>
-
-
-    <div class="intelligence-shell">
-
-        <div class="intelligence-grid">
-
-            <article class="intel-card">
-
-                <h3>Technical evidence</h3>
+                <h3>Technical</h3>
 
                 <p>
-                    Trend, momentum, relative strength and price behaviour.
+                    Price trends, momentum
+                    and relative strength.
                 </p>
 
-            </article>
+            </div>
 
 
-            <article class="intel-card">
+            <div class="layer">
 
-                <h3>Fundamental context</h3>
+                <div class="layer-icon">◈</div>
+
+                <h3>Fundamental</h3>
 
                 <p>
-                    Financial quality, growth and business information.
+                    Financial health,
+                    quality and growth context.
                 </p>
 
-            </article>
+            </div>
 
 
-            <article class="intel-card">
+            <div class="layer">
 
-                <h3>Earnings intelligence</h3>
+                <div class="layer-icon">▣</div>
+
+                <h3>Earnings</h3>
 
                 <p>
-                    Results, growth momentum and relevant developments.
+                    Results, trends and
+                    relevant developments.
                 </p>
 
-            </article>
+            </div>
 
 
-            <article class="intel-card">
+            <div class="layer">
 
-                <h3>Institutional activity</h3>
+                <div class="layer-icon">◎</div>
+
+                <h3>Institutional</h3>
 
                 <p>
-                    Institutional flows and positioning context where available.
+                    Institutional activity
+                    and positioning context.
                 </p>
 
-            </article>
+            </div>
 
 
-            <article class="intel-card">
+            <div class="layer">
 
-                <h3>News intelligence</h3>
+                <div class="layer-icon">◫</div>
+
+                <h3>News</h3>
 
                 <p>
-                    Material events and relevant information affecting the investment context.
+                    Relevant events and
+                    information that matters.
                 </p>
 
-            </article>
+            </div>
 
 
-            <article class="intel-card">
+            <div class="layer">
 
-                <h3>Sector intelligence</h3>
+                <div class="layer-icon">◉</div>
+
+                <h3>Sector</h3>
 
                 <p>
-                    Sector strength, weakness and broader leadership trends.
+                    Strength, weakness
+                    and sector leadership.
                 </p>
 
-            </article>
+            </div>
 
 
-            <article class="intel-card">
+            <div class="layer">
 
-                <h3>Market context</h3>
+                <div class="layer-icon">◌</div>
+
+                <h3>Market</h3>
 
                 <p>
-                    Market conditions, breadth, movement and wider environment.
+                    Broader conditions
+                    and market environment.
                 </p>
 
-            </article>
+            </div>
 
 
-            <article class="intel-card">
+            <div class="layer">
 
-                <h3>Portfolio intelligence</h3>
+                <div class="layer-icon">✦</div>
+
+                <h3>Portfolio</h3>
 
                 <p>
-                    Portfolio fit, concentration, allocation and holding context.
+                    Position and portfolio
+                    context around the insight.
                 </p>
 
-            </article>
+            </div>
 
         </div>
 
@@ -1757,28 +2293,11 @@ footer{
      MARKETS
 ===================================================== -->
 
-<section
-    class="screen-section"
-    id="markets"
->
+<section class="section">
 
-    <div class="container split">
+    <div class="container">
 
-        <div class="visual">
-
-            <div class="app-screen screen-single">
-
-                <img
-                    src="assets/markets.png"
-                    alt="Markets and AI intelligence"
-                >
-
-            </div>
-
-        </div>
-
-
-        <div class="copy">
+        <div class="center">
 
             <div class="section-kicker">
 
@@ -1786,21 +2305,109 @@ footer{
 
             </div>
 
-
             <h2 class="section-title">
 
-                Your portfolio does not<br>
+                Your portfolio does not
 
-                live in isolation.
+                <br>
+
+                <span class="gradient">
+
+                    live in isolation.
+
+                </span>
 
             </h2>
 
-
             <p class="section-copy">
 
-                Investment decisions happen within a wider market environment. Follow market conditions, opportunity radar and sector intelligence from the same product.
+                Understand what is happening around your investments,
+                from the broader market to emerging opportunities
+                and sector movement.
 
             </p>
+
+        </div>
+
+
+        <div class="market-grid">
+
+            <div>
+
+                <div class="market-cards">
+
+                    <div class="market-card">
+
+                        <span>01</span>
+
+                        <div>
+
+                            <h3>
+                                Market context
+                            </h3>
+
+                            <p>
+                                Follow the broader market environment
+                                around your portfolio.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="market-card">
+
+                        <span>02</span>
+
+                        <div>
+
+                            <h3>
+                                Opportunity radar
+                            </h3>
+
+                            <p>
+                                See where AI intelligence is identifying
+                                areas worth reviewing.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="market-card">
+
+                        <span>03</span>
+
+                        <div>
+
+                            <h3>
+                                Sector intelligence
+                            </h3>
+
+                            <p>
+                                See where strength and weakness
+                                may be developing.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="screen markets-screen">
+
+                <img
+                    src="assets/markets.png"
+                    alt="Markets intelligence"
+                >
+
+            </div>
 
         </div>
 
@@ -1810,95 +2417,77 @@ footer{
 
 
 <!-- =====================================================
-     MORE OF THE APP
+     JOURNEY
 ===================================================== -->
 
 <section
-    class="container section"
-    id="screens"
+    class="container section journey"
+    id="how"
 >
 
     <div class="center">
 
         <div class="section-kicker">
 
-            INSIDE THE APP
+            ONE COPILOT ACROSS THE JOURNEY
 
         </div>
 
-
         <h2 class="section-title">
 
-            One connected<br>
+            Intelligence first.
 
-            investment workspace.
+            <br>
+
+            <span class="gradient">
+
+                You decide.
+
+            </span>
 
         </h2>
 
-
         <p class="section-copy">
 
-            Every screen is part of the same journey — from monitoring your portfolio to exploring market context and reviewing AI intelligence.
+            From monitoring your portfolio to exploring opportunities
+            and reviewing the evidence, the experience stays connected.
 
         </p>
 
     </div>
 
 
-    <div class="gallery">
+    <div class="journey-stage">
 
-        <div>
+        <img
+            class="screen journey-phone"
+            src="assets/profile.png"
+            alt="Profile"
+        >
 
-            <div class="app-screen">
+        <img
+            class="screen journey-phone"
+            src="assets/ai_insights.png"
+            alt="AI Insights"
+        >
 
-                <img
-                    src="assets/home.png"
-                    alt="Portfolio AI Copilot home screen"
-                >
+        <img
+            class="screen journey-phone"
+            src="assets/home.png"
+            alt="Home"
+        >
 
-            </div>
+        <img
+            class="screen journey-phone"
+            src="assets/portfolio.png"
+            alt="Portfolio"
+        >
 
-            <div class="gallery-label">
-                Home overview
-            </div>
-
-        </div>
-
-
-        <div>
-
-            <div class="app-screen">
-
-                <img
-                    src="assets/profile.png"
-                    alt="Profile and settings"
-                >
-
-            </div>
-
-            <div class="gallery-label">
-                Profile & settings
-            </div>
-
-        </div>
-
-
-        <div>
-
-            <div class="app-screen">
-
-                <img
-                    src="assets/ai_portfolio_insights.png"
-                    alt="AI Portfolio Insights"
-                >
-
-            </div>
-
-            <div class="gallery-label">
-                Portfolio intelligence
-            </div>
-
-        </div>
+        <img
+            class="screen journey-phone"
+            src="assets/ai_portfolio_insights.png"
+            alt="Portfolio Intelligence"
+        >
 
     </div>
 
@@ -1906,7 +2495,7 @@ footer{
 
 
 <!-- =====================================================
-     HUMAN CONTROL
+     CONTROL
 ===================================================== -->
 
 <section
@@ -1914,88 +2503,94 @@ footer{
     id="control"
 >
 
-    <div class="control-shell">
+    <div class="profile-grid">
+
+        <div class="screen profile-screen">
+
+            <img
+                src="assets/profile.png"
+                alt="Profile and settings"
+            >
+
+        </div>
+
 
         <div>
 
             <div class="section-kicker">
 
-                HUMAN CONTROL
+                YOUR COPILOT, YOUR WAY
 
             </div>
 
+            <h2 class="section-title">
 
-            <p class="quote">
+                Intelligence that supports
 
-                AI provides<br>
-
-                intelligence.<br>
+                <br>
 
                 <span class="gradient">
 
-                    You decide.
+                    your decisions.
 
                 </span>
+
+            </h2>
+
+            <p class="section-copy">
+
+                Connect your portfolio, define your preferences
+                and control how Portfolio AI Copilot supports you.
+                The product provides intelligence without taking
+                away ownership of the decision.
 
             </p>
 
 
-            <div class="control-list">
+            <div class="profile-points">
 
-                <div class="control-item">
+                <div class="profile-point">
 
-                    <b>✦</b>
+                    <b>
+                        Portfolio-aware context
+                    </b>
 
                     <span>
-                        Review AI insights before making a decision.
+                        Your portfolio remains at the centre
+                        of the intelligence experience.
                     </span>
 
                 </div>
 
 
-                <div class="control-item">
+                <div class="profile-point">
 
-                    <b>✦</b>
+                    <b>
+                        AI Copilot preferences
+                    </b>
 
                     <span>
-                        See supporting evidence and portfolio context.
+                        Control relevant settings and preferences
+                        as the product evolves.
                     </span>
 
                 </div>
 
 
-                <div class="control-item">
+                <div class="profile-point">
 
-                    <b>✦</b>
-
-                    <span>
-                        Use the intelligence as support, not as a replacement for judgement.
-                    </span>
-
-                </div>
-
-
-                <div class="control-item">
-
-                    <b>✦</b>
+                    <b>
+                        Human ownership stays intact
+                    </b>
 
                     <span>
-                        You remain responsible for your investment decisions.
+                        AI can analyse and provide insights.
+                        Your investment decisions remain yours.
                     </span>
 
                 </div>
 
             </div>
-
-        </div>
-
-
-        <div class="app-screen screen-single">
-
-            <img
-                src="assets/profile.png"
-                alt="Portfolio AI Copilot settings"
-            >
 
         </div>
 
@@ -2005,7 +2600,7 @@ footer{
 
 
 <!-- =====================================================
-     BETA CTA
+     PRIVATE BETA
 ===================================================== -->
 
 <section class="container beta">
@@ -2018,10 +2613,11 @@ footer{
 
         </div>
 
-
         <h2>
 
-            Your investments already<br>
+            Your investments already
+
+            <br>
 
             have data.
 
@@ -2035,24 +2631,21 @@ footer{
 
         </h2>
 
-
         <p>
 
-            Join the early group helping shape Portfolio AI Copilot.
+            Join the early group helping shape
+            Portfolio AI Copilot.
 
         </p>
 
+        <a
+            class="btn btn-primary"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header"
+        >
 
-        <div class="btn-row">
+            Request Private Beta Access →
 
-            <a
-                class="btn btn-primary"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSf2Sg29qxGemC4HhdOL94baxdBbBR8oylw-eY3BPJKcEZ_JHg/viewform?usp=header"
-            >
-                Request Private Beta Access →
-            </a>
-
-        </div>
+        </a>
 
     </div>
 
@@ -2085,19 +2678,31 @@ footer{
 
     <div class="footer-links">
 
-        <a href="#portfolio">Product</a>
+        <a href="#portfolio">
+            Product
+        </a>
 
-        <a href="#intelligence">Intelligence</a>
+        <a href="#intelligence">
+            Intelligence
+        </a>
 
-        <a href="#markets">Markets</a>
+        <a href="#how">
+            How it works
+        </a>
 
-        <a href="#screens">Screens</a>
+        <a href="#control">
+            Control
+        </a>
 
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="privacy.html">
+            Privacy Policy
+        </a>
 
     </div>
 
 </footer>
 
+
 </body>
+
 </html>
