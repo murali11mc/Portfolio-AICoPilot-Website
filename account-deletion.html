@@ -10,96 +10,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg: #060910;
-            --surface: #0d1522;
-            --line: #22324a;
-            --text: #f4f7fb;
-            --muted: #a1aec0;
-            --accent: #a98fff;
-            --green: #48d7a0;
-        }
-        * { box-sizing: border-box; }
-        body {
-            margin: 0;
-            background:
-                radial-gradient(900px 500px at 50% -180px, rgba(117,89,255,0.18), transparent 68%),
-                var(--bg);
-            color: var(--text);
-            font-family: "DM Sans", sans-serif;
-            line-height: 1.7;
-        }
-        a { color: var(--accent); }
-        .container { width: min(900px, calc(100% - 40px)); margin: auto; }
-        .nav {
-            min-height: 84px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.07);
-        }
-        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
-        .brand img { width: 42px; height: 42px; object-fit: contain; }
-        .brand-name { font-family: "Manrope", sans-serif; font-size: 17px; font-weight: 800; }
-        .brand-tag { margin-top: 3px; font-size: 9px; letter-spacing: 1.2px; color: #8794a7; }
-        .back-link { text-decoration: none; font-size: 13px; font-weight: 700; color: #c8b9ff; }
-        .page { padding: 80px 0 100px; }
-        .hero { padding-bottom: 45px; border-bottom: 1px solid var(--line); }
-        .eyebrow {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 7px 12px; border-radius: 999px;
-            border: 1px solid rgba(141,108,255,0.4);
-            background: rgba(141,108,255,0.09);
-            color: #c8b9ff; font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
-        }
-        .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
-        h1, h2 { font-family: "Manrope", sans-serif; color: var(--text); }
-        h1 { margin: 22px 0 14px; font-size: clamp(42px, 7vw, 64px); line-height: 1.08; letter-spacing: -2.5px; }
-        h2 { margin: 0 0 14px; font-size: 25px; line-height: 1.25; letter-spacing: -0.8px; }
-        .intro { max-width: 720px; margin: 0; font-size: 17px; color: var(--muted); }
-        .content { padding-top: 50px; }
-        .section { margin-bottom: 45px; }
-        p, li { font-size: 16px; color: var(--muted); }
-        .request-box {
-            padding: 28px;
-            border: 1px solid rgba(141,108,255,0.35);
-            border-radius: 18px;
-            background: linear-gradient(145deg, rgba(141,108,255,0.10), rgba(90,156,255,0.05));
-        }
-        .button {
-            display: inline-block;
-            margin-top: 8px;
-            padding: 12px 18px;
-            border-radius: 10px;
-            background: #8d6cff;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-        }
-        footer { padding: 32px 0 45px; border-top: 1px solid var(--line); color: #728096; font-size: 12px; }
-        @media (max-width: 720px) {
-            .container { width: calc(100% - 28px); }
-            .nav { min-height: 70px; }
-            .brand img { width: 36px; height: 36px; }
-            .brand-name { font-size: 15px; }
-            .brand-tag { display: none; }
-            .page { padding-top: 55px; }
-            h1 { font-size: 42px; letter-spacing: -2px; }
-            h2 { font-size: 23px; }
-            p, li { font-size: 15px; }
-        }
+        :root{--bg:#060910;--line:#22324a;--text:#f4f7fb;--muted:#a1aec0;--accent:#a98fff;--green:#48d7a0}
+        *{box-sizing:border-box} body{margin:0;background:radial-gradient(900px 500px at 50% -180px,rgba(117,89,255,.18),transparent 68%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.7}
+        a{color:var(--accent)} .container{width:min(900px,calc(100% - 40px));margin:auto}
+        .nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid rgba(255,255,255,.07)}
+        .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)} .brand img{width:42px;height:42px;object-fit:contain}
+        .brand-name{font-family:"Manrope",sans-serif;font-size:17px;font-weight:800}.brand-tag{margin-top:3px;font-size:9px;letter-spacing:1.2px;color:#8794a7}
+        .back-link{text-decoration:none;font-size:13px;font-weight:700;color:#c8b9ff}.page{padding:80px 0 100px}.hero{padding-bottom:45px;border-bottom:1px solid var(--line)}
+        .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;border:1px solid rgba(141,108,255,.4);background:rgba(141,108,255,.09);color:#c8b9ff;font-size:10px;font-weight:700;letter-spacing:1.5px}
+        .dot{width:7px;height:7px;border-radius:50%;background:var(--green)} h1,h2{font-family:"Manrope",sans-serif;color:var(--text)}
+        h1{margin:22px 0 14px;font-size:clamp(42px,7vw,64px);line-height:1.08;letter-spacing:-2.5px} h2{margin:0 0 14px;font-size:25px}
+        .intro{max-width:720px;margin:0;font-size:17px;color:var(--muted)}.content{padding-top:50px}.section{margin-bottom:45px}p{font-size:16px;color:var(--muted)}
+        .request-box{padding:28px;border:1px solid rgba(141,108,255,.35);border-radius:18px;background:linear-gradient(145deg,rgba(141,108,255,.10),rgba(90,156,255,.05))}
+        .button{display:inline-block;margin-top:8px;padding:12px 18px;border-radius:10px;background:#8d6cff;color:#fff;text-decoration:none;font-weight:700}
+        footer{padding:32px 0 45px;border-top:1px solid var(--line);color:#728096;font-size:12px}
+        @media(max-width:720px){.container{width:calc(100% - 28px)}.nav{min-height:70px}.brand img{width:36px;height:36px}.brand-name{font-size:15px}.brand-tag{display:none}.page{padding-top:55px}h1{font-size:42px;letter-spacing:-2px}h2{font-size:23px}p{font-size:15px}}
     </style>
 </head>
 <body>
 <header class="container nav">
-    <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="Portfolio AI Copilot">
-        <span>
-            <div class="brand-name">Portfolio AI Copilot</div>
-            <div class="brand-tag">AI CO-PILOT · YOU STAY IN CONTROL</div>
-        </span>
-    </a>
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="Portfolio AI Copilot"><span><div class="brand-name">Portfolio AI Copilot</div><div class="brand-tag">AI CO-PILOT · YOU STAY IN CONTROL</div></span></a>
     <a class="back-link" href="index.html">← Back to website</a>
 </header>
 
@@ -107,25 +37,24 @@
     <section class="hero">
         <div class="eyebrow"><span class="dot"></span>ACCOUNT & DATA</div>
         <h1>Account Deletion</h1>
-        <p class="intro">
-            You can request deletion of your Portfolio AI Copilot account and associated personal information by email.
-        </p>
+        <p class="intro">Request deletion of your Portfolio AI Copilot account and associated personal information.</p>
     </section>
 
     <div class="content">
         <section class="section">
-            <h2>How to request deletion</h2>
+            <h2>Request account deletion</h2>
             <div class="request-box">
                 <p>
-                    Send an email from the email address associated with your Portfolio AI Copilot account.
-                    Please use the subject line <strong>Account Deletion Request</strong>.
+                    Click below to open your email application with the recipient, subject and request body already filled in.
+                    Review the message and click <strong>Send</strong> in your email application.
                 </p>
-                <a class="button" href="mailto:murali11mc@11949097.brevosend.com?subject=Account%20Deletion%20Request">
-                    Email us to request deletion
+                <a class="button" href="mailto:murali11mc@11949097.brevosend.com?subject=Account%20Deletion%20Request&body=Hello%20Portfolio%20AI%20Copilot%20Support%2C%0A%0AI%20request%20the%20deletion%20of%20my%20Portfolio%20AI%20Copilot%20account%20and%20associated%20personal%20data.%0A%0AAccount%20email%3A%20%5Benter%20your%20account%20email%5D%0A%0AThank%20you.">
+                    Request account deletion
                 </a>
             </div>
             <p>
-                We may ask you to confirm ownership of the account before processing the request.
+                Please send the request from the email address associated with your Portfolio AI Copilot account.
+                We may ask you to confirm account ownership before processing the request.
             </p>
         </section>
 
@@ -151,23 +80,17 @@
             <h2>Processing of requests</h2>
             <p>
                 Account deletion requests are reviewed and processed after account ownership is verified. If additional
-                information is required to complete the request, we will contact you using the email address provided.
+                information is required, we will contact you using the email address provided.
             </p>
         </section>
 
         <section class="section">
             <h2>Contact</h2>
-            <p>
-                Portfolio AI Copilot<br>
-                Email:
-                <a href="mailto:murali11mc@11949097.brevosend.com">murali11mc@11949097.brevosend.com</a>
-            </p>
+            <p>Portfolio AI Copilot<br>Email: <a href="mailto:murali11mc@11949097.brevosend.com">murali11mc@11949097.brevosend.com</a></p>
         </section>
     </div>
 </main>
 
-<footer class="container">
-    © 2026 Portfolio AI Copilot. All rights reserved.
-</footer>
+<footer class="container">© 2026 Portfolio AI Copilot. All rights reserved.</footer>
 </body>
 </html>
